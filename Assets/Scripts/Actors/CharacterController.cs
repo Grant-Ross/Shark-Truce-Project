@@ -16,6 +16,8 @@ public class CharacterController : MonoBehaviour
     protected bool Grounded;
     protected bool Current = false;
 
+    protected bool facingRight = true;
+
 
     private void Start()
     {
@@ -32,6 +34,7 @@ public class CharacterController : MonoBehaviour
     {
         if (!Current) return;
         Velocity.x = Input.GetAxis("Horizontal") * walkSpeed;
+        if (Velocity.x != 0) facingRight = Velocity.x > 0;
         if (Grounded && Input.GetButtonDown("Jump")) Jump();
         //if (Input.GetButtonDown("Switch")) GameController.Instance.SwitchCharacter(GameController.Character.Cheese);
         CheckCharacterSwitch();
@@ -52,6 +55,7 @@ public class CharacterController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Z))GameController.Instance.SwitchCharacter(GameController.Character.Patty);
         if(Input.GetKeyDown(KeyCode.X))GameController.Instance.SwitchCharacter(GameController.Character.Cheese);
         if(Input.GetKeyDown(KeyCode.C))GameController.Instance.SwitchCharacter(GameController.Character.Lettuce);
+        if(Input.GetKeyDown(KeyCode.V))GameController.Instance.SwitchCharacter(GameController.Character.Tomato);
     }
 
     protected virtual void OnTriggerStay2D(Collider2D other)

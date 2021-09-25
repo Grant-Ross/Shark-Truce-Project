@@ -1,5 +1,23 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &7540110276614829717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2547411145580849022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9bb8feeef10c0f4ea7015556f83f426, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: 3
+  rb2D: {fileID: 2547411145580849016}
+  groundCheck: {fileID: 2547411145580849023}
+  walkSpeed: 8
+  jumpPower: 14
+  seedBullet: {fileID: 7175928978771041667, guid: e0d69d159f7435e479e85d1793f54886, type: 3}
 --- !u!1001 &2599970940643361692
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -71,5 +89,21 @@ PrefabInstance:
       propertyPath: character
       value: 3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7333310516465349433, guid: 93bb0de52b89c784bb867f5ea3f07fd1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 93bb0de52b89c784bb867f5ea3f07fd1, type: 3}
+--- !u!1 &2547411145580849022 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 526581661691110626, guid: 93bb0de52b89c784bb867f5ea3f07fd1, type: 3}
+  m_PrefabInstance: {fileID: 2599970940643361692}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &2547411145580849016 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 526581661691110628, guid: 93bb0de52b89c784bb867f5ea3f07fd1, type: 3}
+  m_PrefabInstance: {fileID: 2599970940643361692}
+  m_PrefabAsset: {fileID: 0}
+--- !u!68 &2547411145580849023 stripped
+EdgeCollider2D:
+  m_CorrespondingSourceObject: {fileID: 526581661691110627, guid: 93bb0de52b89c784bb867f5ea3f07fd1, type: 3}
+  m_PrefabInstance: {fileID: 2599970940643361692}
+  m_PrefabAsset: {fileID: 0}

@@ -2,17 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TomatoController : MonoBehaviour
+public class TomatoController : CharacterController
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private GameObject seedBullet;
+
+    private const float BulletOffset = .8f;
+    private const float BulletCooldown = .5f;
+
+    private float _cooldownTimer = 0;
+    
+    protected override void Update()
     {
-        
+        if(!Current) return;
+        base.Update();
+        if (_cooldownTimer > 0) _cooldownTimer -= Time.deltaTime;
+        else if (Input.GetButtonDown("Fire")) ShootSeed();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void ShootSeed()
     {
-        
+        var bullet = Instantiate(seedBullet, transform.position + (facingRight ? Vector3.right: Vector3.left)*BulletOffset
+            , Quaternion.identity);
+        bullet.transform.Rotate(0,0, facingRight ? -90 : 90);
+        _cooldownTimer = BulletCooldown;
     }
+    
 }
