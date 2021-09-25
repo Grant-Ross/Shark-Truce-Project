@@ -24,7 +24,6 @@ public class GameManager : MonoBehaviour
 
     public void LoadScene(string sceneName)
     {
-        print("level loaded: " + sceneName);
         SceneManager.LoadScene(sceneName);
     }
 

@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 526581660775555433}
   - component: {fileID: 526581660775555434}
   - component: {fileID: 1798671303048235658}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sprite
-  m_TagString: Ground
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 7333310516465349433}
   m_Layer: 8
   m_Name: Basic Character
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -203,5 +203,3 @@ MonoBehaviour:
   groundCheck: {fileID: 526581661691110627}
   walkSpeed: 8
   jumpPower: 14
-  velocity: {x: 0, y: 0}
-  grounded: 0

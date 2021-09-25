@@ -65,7 +65,7 @@ public class CharacterController : MonoBehaviour
 
     protected virtual void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Ground") && other.IsTouching(groundCheck))
+        if (other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Player") && other.IsTouching(groundCheck))
         {
             Grounded = true;
         }
