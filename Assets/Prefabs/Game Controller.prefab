@@ -88,11 +88,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ec3e5f5411ba3f45b9d8a9203904247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonPrefab: {fileID: 7769889342798268252, guid: 766c00c612539714eac6135bb62b94fc, type: 3}
   charButtons:
   - character: 1
-    buttonSprite: {fileID: 0}
+    buttonSprite: {fileID: 575685369645702779, guid: ec8e8763f8ac7744a81b3b9b4de48c6f, type: 3}
   - character: 2
-    buttonSprite: {fileID: 0}
+    buttonSprite: {fileID: 6278486218923484563, guid: ec8e8763f8ac7744a81b3b9b4de48c6f, type: 3}
+  - character: 3
+    buttonSprite: {fileID: -360123686633694459, guid: ec8e8763f8ac7744a81b3b9b4de48c6f, type: 3}
+  - character: 4
+    buttonSprite: {fileID: -1086991788418008460, guid: ec8e8763f8ac7744a81b3b9b4de48c6f, type: 3}
 --- !u!1 &3855591517465035196
 GameObject:
   m_ObjectHideFlags: 0

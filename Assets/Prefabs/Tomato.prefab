@@ -25,6 +25,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 526581660775555434, guid: 93bb0de52b89c784bb867f5ea3f07fd1, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 526581660775555434, guid: 93bb0de52b89c784bb867f5ea3f07fd1, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2.93
+      objectReference: {fileID: 0}
     - target: {fileID: 526581661691110626, guid: 93bb0de52b89c784bb867f5ea3f07fd1, type: 3}
       propertyPath: m_Name
       value: Tomato
@@ -74,16 +82,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1798671303048235658, guid: 93bb0de52b89c784bb867f5ea3f07fd1, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -360123686633694459, guid: ec8e8763f8ac7744a81b3b9b4de48c6f, type: 3}
+    - target: {fileID: 1798671303048235658, guid: 93bb0de52b89c784bb867f5ea3f07fd1, type: 3}
       propertyPath: m_Color.b
-      value: 0.038581733
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1798671303048235658, guid: 93bb0de52b89c784bb867f5ea3f07fd1, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1798671303048235658, guid: 93bb0de52b89c784bb867f5ea3f07fd1, type: 3}
       propertyPath: m_Color.r
-      value: 0.8773585
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7333310516465349433, guid: 93bb0de52b89c784bb867f5ea3f07fd1, type: 3}
       propertyPath: character
