@@ -12,7 +12,7 @@ public class GameController : MonoBehaviour
     
     public enum Character
     {
-        None, Patty, Cheese
+        None, Patty, Cheese, Tomato, Lettuce
     }
 
     private Dictionary<Character, CharacterController> _characterDict = new Dictionary<Character, CharacterController>();

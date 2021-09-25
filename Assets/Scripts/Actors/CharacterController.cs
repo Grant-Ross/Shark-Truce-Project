@@ -12,9 +12,9 @@ public class CharacterController : MonoBehaviour
     public float walkSpeed;
     public float jumpPower;
 
-    public Vector2 velocity;
-    public bool grounded;
-    private bool current = false;
+    protected Vector2 Velocity;
+    protected bool Grounded;
+    protected bool Current = false;
 
 
     private void Start()
@@ -28,26 +28,37 @@ public class CharacterController : MonoBehaviour
         GameController.characterSwitchListener -= OnCharacterSwitch;
     }
 
-    private void Update()
+    protected virtual void Update()
     {
-        if (!current) return;
-        velocity.x = Input.GetAxis("Horizontal") * walkSpeed;
-        if (grounded && Input.GetButtonDown("Jump")) rb2D.velocity = new Vector2(rb2D.velocity.x, jumpPower);
+        if (!Current) return;
+        Velocity.x = Input.GetAxis("Horizontal") * walkSpeed;
+        if (Grounded && Input.GetButtonDown("Jump")) Jump();
         //if (Input.GetButtonDown("Switch")) GameController.Instance.SwitchCharacter(GameController.Character.Cheese);
-        if(Input.GetKeyDown(KeyCode.Z))GameController.Instance.SwitchCharacter(GameController.Character.Patty);
-        if(Input.GetKeyDown(KeyCode.X))GameController.Instance.SwitchCharacter(GameController.Character.Cheese);
+        CheckCharacterSwitch();
     }
 
     private void FixedUpdate()
     {
-        rb2D.velocity = new Vector2(velocity.x, rb2D.velocity.y);
+        rb2D.velocity = new Vector2(Velocity.x, rb2D.velocity.y);
+    }
+
+    protected void Jump()
+    {
+        rb2D.velocity = new Vector2(rb2D.velocity.x, jumpPower);
+    }
+
+    private void CheckCharacterSwitch()
+    {
+        if(Input.GetKeyDown(KeyCode.Z))GameController.Instance.SwitchCharacter(GameController.Character.Patty);
+        if(Input.GetKeyDown(KeyCode.X))GameController.Instance.SwitchCharacter(GameController.Character.Cheese);
+        if(Input.GetKeyDown(KeyCode.C))GameController.Instance.SwitchCharacter(GameController.Character.Lettuce);
     }
 
     protected virtual void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Ground") && other.IsTouching(groundCheck))
         {
-            grounded = true;
+            Grounded = true;
         }
     }
 
@@ -55,13 +66,13 @@ public class CharacterController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Player"))
         {
-            grounded = false;
+            Grounded = false;
         }
     }
 
     private void OnCharacterSwitch(GameController.Character c)
     {
-        current = character == c;
+        Current = character == c;
         rb2D.constraints = character == c ? RigidbodyConstraints2D.FreezeRotation : RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
     }
 }
