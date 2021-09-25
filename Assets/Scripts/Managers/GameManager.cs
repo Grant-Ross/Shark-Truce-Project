@@ -18,19 +18,20 @@ public class GameManager : MonoBehaviour
 
     public void LoadLevel(string levelName)
     {
-        LoadScene(levelName);
         SceneManager.sceneLoaded += OnLevelLoaded;
-
+        LoadScene(levelName);
     }
 
     public void LoadScene(string sceneName)
     {
+        print("level loaded: " + sceneName);
         SceneManager.LoadScene(sceneName);
     }
 
     private void OnLevelLoaded(Scene scene, LoadSceneMode mode)
     {
-        Instantiate(gameController);
+        
         SceneManager.sceneLoaded -= OnLevelLoaded;
+        Instantiate(gameController);
     }
 }

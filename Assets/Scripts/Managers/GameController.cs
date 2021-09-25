@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -22,19 +23,21 @@ public class GameController : MonoBehaviour
     public static HashSet<Character> FinishedCharacters = new HashSet<Character>();
 
     public static event Action<Character> CharacterSwitchListener;
-    public static event Action<Character> StageFinishedListener;
+    public static event Action StageFinishedListener;
 
 
     private void Start()
     {
+        
         _currentCharacter = Character.None;
         SwitchCharacter(Character.Patty);
+        
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.R)) ResetLevel();
-        if (FinishedCharacters.Count == CurrentCharacters.Count) FinishLevel();
+        if (CurrentCharacters.Count > 0 && FinishedCharacters.Count == CurrentCharacters.Count) FinishLevel();
     }
 
 
@@ -64,6 +67,9 @@ public class GameController : MonoBehaviour
 
     private void FinishLevel()
     {
+        StageFinishedListener?.Invoke();
+        CurrentCharacters = new Dictionary<Character, CharacterController>();
+        FinishedCharacters = new HashSet<Character>();
         GameManager.Instance.LoadScene("LevelSelect");
     }
     
