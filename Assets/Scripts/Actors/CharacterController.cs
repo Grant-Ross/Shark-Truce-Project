@@ -22,12 +22,12 @@ public class CharacterController : MonoBehaviour
     private void Start()
     {
         GameController.Instance.AddCharacter(character, this);
-        GameController.characterSwitchListener += OnCharacterSwitch;
+        GameController.CharacterSwitchListener += OnCharacterSwitch;
     }
 
     private void OnDestroy()
     {
-        GameController.characterSwitchListener -= OnCharacterSwitch;
+        GameController.CharacterSwitchListener -= OnCharacterSwitch;
     }
 
     protected virtual void Update()

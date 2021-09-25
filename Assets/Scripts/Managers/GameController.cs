@@ -12,14 +12,14 @@ public class GameController : MonoBehaviour
     
     public enum Character
     {
-        None, Patty, Cheese, Tomato, Lettuce
+        None=0, Patty=1, Cheese=2, Tomato=3, Lettuce=4
     }
 
-    private Dictionary<Character, CharacterController> _characterDict = new Dictionary<Character, CharacterController>();
+    public static Dictionary<Character, CharacterController> CurrentCharacters { get; private set; }
 
     private Character _currentCharacter;
 
-    public static event Action<Character> characterSwitchListener;
+    public static event Action<Character> CharacterSwitchListener;
 
     private void Start()
     {
@@ -35,20 +35,21 @@ public class GameController : MonoBehaviour
 
     public void SwitchCharacter(Character character)
     {
-        if (character == _currentCharacter || !_characterDict.ContainsKey(character)) return;
+        if (character == _currentCharacter || !CurrentCharacters.ContainsKey(character)) return;
         _currentCharacter = character;
-        characterSwitchListener?.Invoke(character);
+        CharacterSwitchListener?.Invoke(character);
     }
     
     public void AddCharacter(Character character, CharacterController charController)
     {
-        _characterDict.Add(character, charController);
+        if(CurrentCharacters == null) CurrentCharacters = new Dictionary<Character, CharacterController>();
+        CurrentCharacters.Add(character, charController);
     }
 
 
     private void ResetCharacters()
     {
-        _characterDict = new Dictionary<Character, CharacterController>();
+        CurrentCharacters = new Dictionary<Character, CharacterController>();
     }
 
     private void ResetLevel()
