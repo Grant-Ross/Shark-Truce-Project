@@ -5,33 +5,41 @@ using UnityEngine;
 
 public class CharacterController : MonoBehaviour
 {
-    [SerializeField] private Rigidbody2D rb2D = null;
-    [SerializeField] private Collider2D groundCheck = null;
+    [SerializeField] protected GameController.Character character;
+    [SerializeField] protected Rigidbody2D rb2D = null;
+    [SerializeField] protected Collider2D groundCheck = null;
 
     public float walkSpeed;
     public float jumpPower;
 
-    private Vector2 _velocity;
-    private bool _grounded;
+    public Vector2 velocity;
+    public bool grounded;
 
+
+    private void Awake()
+    {
+        GameController.Instance.AddCharacter(character, this);
+    }
 
     private void Update()
     {
-        _velocity.x = Input.GetAxis("Horizontal") * walkSpeed;
-        if (_grounded && Input.GetButtonDown("Jump")) rb2D.velocity = new Vector2(rb2D.velocity.x, jumpPower);
+        velocity.x = Input.GetAxis("Horizontal") * walkSpeed;
+        if (grounded && Input.GetButtonDown("Jump")) rb2D.velocity = new Vector2(rb2D.velocity.x, jumpPower);
+        //if (Input.GetButtonDown("Switch")) GameController.Instance.SwitchCharacter(GameController.Character.Cheese);
+        if(Input.GetKeyDown(KeyCode.Z))GameController.Instance.SwitchCharacter(GameController.Character.Patty);
+        if(Input.GetKeyDown(KeyCode.X))GameController.Instance.SwitchCharacter(GameController.Character.Cheese);
     }
 
     private void FixedUpdate()
     {
-        rb2D.velocity = new Vector2(_velocity.x, rb2D.velocity.y);
+        rb2D.velocity = new Vector2(velocity.x, rb2D.velocity.y);
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnCollisionStay2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Ground") && other.otherCollider == groundCheck)
         {
-            _grounded = true;
-
+            grounded = true;
         }
     }
 
@@ -39,8 +47,7 @@ public class CharacterController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Ground") && other.otherCollider == groundCheck)
         {
-            _grounded = false;
-
+            grounded = false;
         }
     }
 }
