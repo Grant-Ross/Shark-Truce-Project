@@ -19,7 +19,11 @@ public class GameController : MonoBehaviour
 
     private Character _currentCharacter;
 
+    public static HashSet<Character> FinishedCharacters = new HashSet<Character>();
+
     public static event Action<Character> CharacterSwitchListener;
+    public static event Action<Character> StageFinishedListener;
+
 
     private void Start()
     {
@@ -30,6 +34,7 @@ public class GameController : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.R)) ResetLevel();
+        if (FinishedCharacters.Count == CurrentCharacters.Count) FinishLevel();
     }
 
 
@@ -56,4 +61,10 @@ public class GameController : MonoBehaviour
     {
         GameManager.Instance.LoadLevel(SceneManager.GetActiveScene().name);
     }
+
+    private void FinishLevel()
+    {
+        GameManager.Instance.LoadScene("LevelSelect");
+    }
+    
 }

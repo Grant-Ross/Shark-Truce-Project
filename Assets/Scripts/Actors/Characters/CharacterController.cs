@@ -17,6 +17,8 @@ public class CharacterController : MonoBehaviour
     protected bool Current = false;
 
     protected bool facingRight = true;
+    
+    
 
 
     private void Start()
@@ -35,9 +37,8 @@ public class CharacterController : MonoBehaviour
         if (!Current) return;
         Velocity.x = Input.GetAxis("Horizontal") * walkSpeed;
         if (Velocity.x != 0) facingRight = Velocity.x > 0;
+        transform.localScale = new Vector3(Math.Abs(transform.localScale.x) * (facingRight ? 1: -1), transform.localScale.y, transform.localScale.z);
         if (Grounded && Input.GetButtonDown("Jump")) Jump();
-        //if (Input.GetButtonDown("Switch")) GameController.Instance.SwitchCharacter(GameController.Character.Cheese);
-        CheckCharacterSwitch();
     }
 
     private void FixedUpdate()
@@ -50,12 +51,14 @@ public class CharacterController : MonoBehaviour
         rb2D.velocity = new Vector2(rb2D.velocity.x, jumpPower);
     }
 
-    private void CheckCharacterSwitch()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if(Input.GetKeyDown(KeyCode.Z))GameController.Instance.SwitchCharacter(GameController.Character.Patty);
-        if(Input.GetKeyDown(KeyCode.X))GameController.Instance.SwitchCharacter(GameController.Character.Cheese);
-        if(Input.GetKeyDown(KeyCode.C))GameController.Instance.SwitchCharacter(GameController.Character.Lettuce);
-        if(Input.GetKeyDown(KeyCode.V))GameController.Instance.SwitchCharacter(GameController.Character.Tomato);
+        if (other.gameObject.CompareTag("End")) GameController.FinishedCharacters.Add(character);
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("End")) GameController.FinishedCharacters.Remove(character);
     }
 
     protected virtual void OnTriggerStay2D(Collider2D other)

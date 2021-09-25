@@ -13,9 +13,21 @@ public class CharacterButton : MonoBehaviour
     {
         charImage.sprite = buttonInfo.buttonSprite;
         _character = buttonInfo.character;
+        
     }
 
-    public void SwapCharacter()
+    public void OnSelect()
+    {
+        SwapCharacter();
+        (transform as RectTransform).localScale = new Vector2(1.2f,1.2f);
+    }
+
+    public void OnDeselect()
+    {
+        (transform as RectTransform).localScale = new Vector2(1,1);
+    }
+    
+    private void SwapCharacter()
     {
         GameController.Instance.SwitchCharacter(_character);
     }
