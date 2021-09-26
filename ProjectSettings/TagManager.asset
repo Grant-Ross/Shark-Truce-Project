@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - End
   - Airstream
+  - Projectile
   layers:
   - Default
   - TransparentFX
@@ -46,6 +47,12 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Objects
+    uniqueID: 3842529521
+    locked: 0
+  - name: Particles
+    uniqueID: 2838905809
     locked: 0
   - name: Character
     uniqueID: 3359139363

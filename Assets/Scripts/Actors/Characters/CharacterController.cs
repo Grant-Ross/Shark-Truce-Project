@@ -101,7 +101,7 @@ public class CharacterController : MonoBehaviour
         
         if (!stateChanged) return;
         stateChanged = false;
-        print(CurrentState);
+        //print(CurrentState);
         switch (CurrentState)
         {
             case State.Idle: animator.Play("char_idle");
