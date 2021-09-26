@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
-        LoadScene("LevelSelect");
+        LoadScene("TitleScreen");
     }
 
     public void LoadLevel(string levelName)

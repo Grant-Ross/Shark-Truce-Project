@@ -132,7 +132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1295305794898303861, guid: 82d7917295ef30146a4e4ca6513db982, type: 3}
       propertyPath: m_Text
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7836857292326672189, guid: 82d7917295ef30146a4e4ca6513db982, type: 3}
       propertyPath: level
@@ -224,7 +224,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7836857292326672191, guid: 82d7917295ef30146a4e4ca6513db982, type: 3}
       propertyPath: m_Name
-      value: Level Icon
+      value: L5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82d7917295ef30146a4e4ca6513db982, type: 3}
@@ -233,6 +233,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7836857292326672190, guid: 82d7917295ef30146a4e4ca6513db982, type: 3}
   m_PrefabInstance: {fileID: 95420088}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &95420090 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7836857292326672186, guid: 82d7917295ef30146a4e4ca6513db982, type: 3}
+  m_PrefabInstance: {fileID: 95420088}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &121634962
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -242,7 +253,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1295305794898303861, guid: 82d7917295ef30146a4e4ca6513db982, type: 3}
       propertyPath: m_Text
-      value: 1
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7836857292326672189, guid: 82d7917295ef30146a4e4ca6513db982, type: 3}
       propertyPath: level
@@ -334,7 +345,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7836857292326672191, guid: 82d7917295ef30146a4e4ca6513db982, type: 3}
       propertyPath: m_Name
-      value: Level Icon (3)
+      value: L8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82d7917295ef30146a4e4ca6513db982, type: 3}
@@ -392,7 +403,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1295305794898303861, guid: 82d7917295ef30146a4e4ca6513db982, type: 3}
       propertyPath: m_Text
-      value: 1
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7836857292326672189, guid: 82d7917295ef30146a4e4ca6513db982, type: 3}
       propertyPath: level
@@ -484,7 +495,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7836857292326672191, guid: 82d7917295ef30146a4e4ca6513db982, type: 3}
       propertyPath: m_Name
-      value: Level Icon (2)
+      value: L7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82d7917295ef30146a4e4ca6513db982, type: 3}
@@ -502,7 +513,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1295305794898303861, guid: 82d7917295ef30146a4e4ca6513db982, type: 3}
       propertyPath: m_Text
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7836857292326672189, guid: 82d7917295ef30146a4e4ca6513db982, type: 3}
       propertyPath: level
@@ -594,7 +605,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7836857292326672191, guid: 82d7917295ef30146a4e4ca6513db982, type: 3}
       propertyPath: m_Name
-      value: Level Icon (1)
+      value: L2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82d7917295ef30146a4e4ca6513db982, type: 3}
@@ -603,6 +614,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7836857292326672190, guid: 82d7917295ef30146a4e4ca6513db982, type: 3}
   m_PrefabInstance: {fileID: 393195658}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &393195660 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7836857292326672186, guid: 82d7917295ef30146a4e4ca6513db982, type: 3}
+  m_PrefabInstance: {fileID: 393195658}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &473649235
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -612,7 +634,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1295305794898303861, guid: 82d7917295ef30146a4e4ca6513db982, type: 3}
       propertyPath: m_Text
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7836857292326672189, guid: 82d7917295ef30146a4e4ca6513db982, type: 3}
       propertyPath: level
@@ -704,7 +726,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7836857292326672191, guid: 82d7917295ef30146a4e4ca6513db982, type: 3}
       propertyPath: m_Name
-      value: Level Icon (3)
+      value: L4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82d7917295ef30146a4e4ca6513db982, type: 3}
@@ -998,6 +1020,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1368036910 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7836857292326672191, guid: 82d7917295ef30146a4e4ca6513db982, type: 3}
+  m_PrefabInstance: {fileID: 7836857292986540399}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1400085899
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1007,7 +1034,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1295305794898303861, guid: 82d7917295ef30146a4e4ca6513db982, type: 3}
       propertyPath: m_Text
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7836857292326672189, guid: 82d7917295ef30146a4e4ca6513db982, type: 3}
       propertyPath: level
@@ -1099,7 +1126,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7836857292326672191, guid: 82d7917295ef30146a4e4ca6513db982, type: 3}
       propertyPath: m_Name
-      value: Level Icon (2)
+      value: L3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82d7917295ef30146a4e4ca6513db982, type: 3}
@@ -1201,7 +1228,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1295305794898303861, guid: 82d7917295ef30146a4e4ca6513db982, type: 3}
       propertyPath: m_Text
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7836857292326672189, guid: 82d7917295ef30146a4e4ca6513db982, type: 3}
       propertyPath: level
@@ -1293,7 +1320,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7836857292326672191, guid: 82d7917295ef30146a4e4ca6513db982, type: 3}
       propertyPath: m_Name
-      value: Level Icon (1)
+      value: L6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82d7917295ef30146a4e4ca6513db982, type: 3}
@@ -1446,7 +1473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 1368036910}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &2061424023
@@ -1549,6 +1576,22 @@ PrefabInstance:
       propertyPath: m_Text
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7836857292326672186, guid: 82d7917295ef30146a4e4ca6513db982, type: 3}
+      propertyPath: m_Navigation.m_WrapAround
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7836857292326672186, guid: 82d7917295ef30146a4e4ca6513db982, type: 3}
+      propertyPath: m_Navigation.m_SelectOnDown
+      value: 
+      objectReference: {fileID: 95420090}
+    - target: {fileID: 7836857292326672186, guid: 82d7917295ef30146a4e4ca6513db982, type: 3}
+      propertyPath: m_Navigation.m_SelectOnLeft
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7836857292326672186, guid: 82d7917295ef30146a4e4ca6513db982, type: 3}
+      propertyPath: m_Navigation.m_SelectOnRight
+      value: 
+      objectReference: {fileID: 393195660}
     - target: {fileID: 7836857292326672189, guid: 82d7917295ef30146a4e4ca6513db982, type: 3}
       propertyPath: level
       value: 
@@ -1639,7 +1682,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7836857292326672191, guid: 82d7917295ef30146a4e4ca6513db982, type: 3}
       propertyPath: m_Name
-      value: Level Icon
+      value: Level 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82d7917295ef30146a4e4ca6513db982, type: 3}
