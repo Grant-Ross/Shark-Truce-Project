@@ -904,6 +904,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 644319410772159376, guid: 4eda61f83dcafd540a9a78e6625e7759, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 644319410772159376, guid: 4eda61f83dcafd540a9a78e6625e7759, type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 644319410772159376, guid: 4eda61f83dcafd540a9a78e6625e7759, type: 3}
+      propertyPath: InitialModule.startColor.minColor.b
+      value: 0.9339623
+      objectReference: {fileID: 0}
+    - target: {fileID: 644319410772159376, guid: 4eda61f83dcafd540a9a78e6625e7759, type: 3}
+      propertyPath: InitialModule.startColor.minColor.g
+      value: 0.84024566
+      objectReference: {fileID: 0}
+    - target: {fileID: 644319410772159376, guid: 4eda61f83dcafd540a9a78e6625e7759, type: 3}
+      propertyPath: InitialModule.startColor.minColor.r
+      value: 0.76214844
+      objectReference: {fileID: 0}
     - target: {fileID: 644319411550183877, guid: 4eda61f83dcafd540a9a78e6625e7759, type: 3}
       propertyPath: m_Name
       value: Fan
