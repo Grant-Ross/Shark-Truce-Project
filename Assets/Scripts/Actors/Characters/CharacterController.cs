@@ -8,6 +8,7 @@ public class CharacterController : MonoBehaviour
     [SerializeField] protected GameController.Character character;
     [SerializeField] protected Rigidbody2D rb2D = null;
     [SerializeField] protected Collider2D groundCheck = null;
+    [SerializeField] protected Animator animator;
 
     public float walkSpeed;
     public float jumpPower;
@@ -17,15 +18,34 @@ public class CharacterController : MonoBehaviour
     protected bool Current = false;
 
     protected bool facingRight = true;
-    
-    
 
+    public enum State
+    {
+        Idle, Walking, Jumping, Peak, Falling, Landing
+    }
+
+    private State _currentState;
+    protected State CurrentState
+    {
+        get => _currentState;
+        set
+        {
+            if (_currentState == value) return;
+            _currentState = value;
+            if (value == State.Landing) _landTimer = LandTime;
+            stateChanged = true;
+        }
+    }
+
+    private bool stateChanged = false;
+    private float _landTimer = 0;
+    private const float LandTime = .2f;
 
     protected void Start()
     {
         GameController.Instance.AddCharacter(character, this);
         GameController.CharacterSwitchListener += OnCharacterSwitch;
-        
+        _currentState = State.Idle;
     }
 
 
@@ -41,6 +61,43 @@ public class CharacterController : MonoBehaviour
         if (Velocity.x != 0) facingRight = Velocity.x > 0;
         transform.localScale = new Vector3(Math.Abs(transform.localScale.x) * (facingRight ? 1: -1), transform.localScale.y, transform.localScale.z);
         if (Grounded && Input.GetButtonDown("Jump")) Jump();
+        Velocity.y = rb2D.velocity.y;
+        if (_landTimer > 0) _landTimer -= Time.deltaTime;
+        UpdateAnimation();
+    }
+
+    private void UpdateAnimation()
+    {
+        if (Grounded)
+        {
+            if (CurrentState == State.Falling) CurrentState = State.Landing;
+            else if(_landTimer <= 0) CurrentState = Velocity.x != 0 ? State.Walking : State.Idle;
+        }
+        else if (!Grounded || Velocity.y != 0) ;
+        {
+            if (Velocity.y > 2f) CurrentState = State.Jumping;
+            else if (Velocity.y < -2f) CurrentState = State.Falling;
+            else if(CurrentState == State.Jumping) CurrentState = State.Peak;
+        }
+        
+        if (!stateChanged) return;
+        stateChanged = false;
+        print(CurrentState);
+        switch (CurrentState)
+        {
+            case State.Idle: animator.Play("char_idle");
+                break;
+            case State.Walking: animator.Play("char_run");
+                break;
+            case State.Jumping: animator.Play("char_jump");
+                break;
+            case State.Peak: animator.Play("char_peak");
+                break;
+            case State.Falling: animator.Play("char_fall");
+                break;
+            case State.Landing: animator.Play("char_land");
+                break;
+        }
     }
 
     private void FixedUpdate()
@@ -50,6 +107,7 @@ public class CharacterController : MonoBehaviour
 
     protected void Jump()
     {
+        CurrentState = State.Jumping;
         rb2D.velocity = new Vector2(rb2D.velocity.x, jumpPower);
     }
 
@@ -65,7 +123,7 @@ public class CharacterController : MonoBehaviour
 
     protected virtual void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Player") && other.IsTouching(groundCheck))
+        if ((other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Player")) && other.IsTouching(groundCheck))
         {
             Grounded = true;
         }

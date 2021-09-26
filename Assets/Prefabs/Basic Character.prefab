@@ -223,6 +223,7 @@ MonoBehaviour:
   character: 1
   rb2D: {fileID: 526581661691110628}
   groundCheck: {fileID: 526581661691110627}
+  animator: {fileID: 5757561420641113972}
   walkSpeed: 8
   jumpPower: 14
 --- !u!1 &1520203941493111593
