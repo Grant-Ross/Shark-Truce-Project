@@ -15,6 +15,7 @@ MonoBehaviour:
   character: 3
   rb2D: {fileID: 2547411145580849016}
   groundCheck: {fileID: 2547411145580849023}
+  animator: {fileID: 0}
   walkSpeed: 8
   jumpPower: 14
   seedBullet: {fileID: 7175928978771041667, guid: e0d69d159f7435e479e85d1793f54886, type: 3}
@@ -27,11 +28,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 526581660775555434, guid: 93bb0de52b89c784bb867f5ea3f07fd1, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 2.93
+      value: 4.578125
       objectReference: {fileID: 0}
     - target: {fileID: 526581660775555434, guid: 93bb0de52b89c784bb867f5ea3f07fd1, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 2.93
+      value: 4.578125
       objectReference: {fileID: 0}
     - target: {fileID: 526581661691110626, guid: 93bb0de52b89c784bb867f5ea3f07fd1, type: 3}
       propertyPath: m_Name

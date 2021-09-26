@@ -1,0 +1,588 @@
+fileFormatVersion: 2
+guid: 0afc140e3bbb3ff4181d42a4c5bae763
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4059256579526609074
+    second: patty_0
+  - first:
+      213: 4282429846219953640
+    second: patty_1
+  - first:
+      213: 5313186059369984903
+    second: patty_2
+  - first:
+      213: 2661285175917715482
+    second: patty_3
+  - first:
+      213: -4699961055825428195
+    second: patty_4
+  - first:
+      213: -5880798206742632524
+    second: patty_5
+  - first:
+      213: -961891140304169252
+    second: patty_6
+  - first:
+      213: 7980645098372007038
+    second: patty_7
+  - first:
+      213: 3561100716233502528
+    second: patty_8
+  - first:
+      213: 7019854433637542491
+    second: patty_9
+  - first:
+      213: 1410199973051456796
+    second: patty_10
+  - first:
+      213: 3748576511366172870
+    second: patty_11
+  - first:
+      213: 7035737938380578365
+    second: patty_12
+  - first:
+      213: 9099258875304487046
+    second: patty_13
+  - first:
+      213: -170032371065532061
+    second: patty_14
+  - first:
+      213: 5275201029130090277
+    second: patty_15
+  - first:
+      213: 6313061028900379988
+    second: patty_16
+  - first:
+      213: 1352423849861876833
+    second: patty_17
+  - first:
+      213: 7423740042887846440
+    second: patty_18
+  - first:
+      213: 84791412246144861
+    second: patty_19
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: patty_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 900
+        width: 239
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b8c9da2a50655830800000000000000
+      internalID: 4059256579526609074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: patty_1
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 900
+        width: 239
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e5987f714f3e6b30800000000000000
+      internalID: 4282429846219953640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: patty_2
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 900
+        width: 239
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7833e4e029a3cb940800000000000000
+      internalID: 5313186059369984903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: patty_3
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 900
+        width: 239
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a10a69474c8cee420800000000000000
+      internalID: 2661285175917715482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: patty_4
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 900
+        width: 239
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d110b59325266ceb0800000000000000
+      internalID: -4699961055825428195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: patty_5
+      rect:
+        serializedVersion: 2
+        x: 1195
+        y: 900
+        width: 239
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b7e9535035336ea0800000000000000
+      internalID: -5880798206742632524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: patty_6
+      rect:
+        serializedVersion: 2
+        x: 1434
+        y: 900
+        width: 239
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd6139daa1da6a2f0800000000000000
+      internalID: -961891140304169252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: patty_7
+      rect:
+        serializedVersion: 2
+        x: 1673
+        y: 900
+        width: 239
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e740de60f62f0ce60800000000000000
+      internalID: 7980645098372007038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: patty_8
+      rect:
+        serializedVersion: 2
+        x: 1912
+        y: 900
+        width: 239
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04fac70eb329b6130800000000000000
+      internalID: 3561100716233502528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: patty_9
+      rect:
+        serializedVersion: 2
+        x: 2151
+        y: 900
+        width: 239
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5aaae32a688b6160800000000000000
+      internalID: 7019854433637542491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: patty_10
+      rect:
+        serializedVersion: 2
+        x: 2390
+        y: 900
+        width: 239
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1d5ff76769029310800000000000000
+      internalID: 1410199973051456796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: patty_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 600
+        width: 239
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c09a5de97e950430800000000000000
+      internalID: 3748576511366172870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: patty_12
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 600
+        width: 239
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3ed9e5c066f3a160800000000000000
+      internalID: 7035737938380578365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: patty_13
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 600
+        width: 239
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68828d5bcbf074e70800000000000000
+      internalID: 9099258875304487046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: patty_14
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 600
+        width: 239
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 361525a957ce3adf0800000000000000
+      internalID: -170032371065532061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: patty_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 300
+        width: 239
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 527f2140367453940800000000000000
+      internalID: 5275201029130090277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: patty_16
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 300
+        width: 239
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45d18f8ce8f7c9750800000000000000
+      internalID: 6313061028900379988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: patty_17
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 300
+        width: 239
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16c88c47356c4c210800000000000000
+      internalID: 1352423849861876833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: patty_18
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 300
+        width: 239
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82a5c218c3c660760800000000000000
+      internalID: 7423740042887846440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: patty_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 239
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d576fe6175d3d2100800000000000000
+      internalID: 84791412246144861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

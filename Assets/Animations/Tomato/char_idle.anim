@@ -20,15 +20,15 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -8615292698180843620, guid: ed372406804884944b315df9bacfe3ea, type: 3}
+      value: {fileID: 744966594519276227, guid: 300ad440670279b45b80e0e32ec218d0, type: 3}
     - time: 0.083333336
-      value: {fileID: 1835360489147968579, guid: ed372406804884944b315df9bacfe3ea, type: 3}
+      value: {fileID: 5874148907703120886, guid: 300ad440670279b45b80e0e32ec218d0, type: 3}
     - time: 0.18333334
-      value: {fileID: -9051810017879686698, guid: ed372406804884944b315df9bacfe3ea, type: 3}
+      value: {fileID: -986497924118866726, guid: 300ad440670279b45b80e0e32ec218d0, type: 3}
     - time: 0.3
-      value: {fileID: -4126029075249076053, guid: ed372406804884944b315df9bacfe3ea, type: 3}
+      value: {fileID: -1316366368466998040, guid: 300ad440670279b45b80e0e32ec218d0, type: 3}
     - time: 0.53333336
-      value: {fileID: -8615292698180843620, guid: ed372406804884944b315df9bacfe3ea, type: 3}
+      value: {fileID: 744966594519276227, guid: 300ad440670279b45b80e0e32ec218d0, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -92,11 +92,11 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -8615292698180843620, guid: ed372406804884944b315df9bacfe3ea, type: 3}
-    - {fileID: 1835360489147968579, guid: ed372406804884944b315df9bacfe3ea, type: 3}
-    - {fileID: -9051810017879686698, guid: ed372406804884944b315df9bacfe3ea, type: 3}
-    - {fileID: -4126029075249076053, guid: ed372406804884944b315df9bacfe3ea, type: 3}
-    - {fileID: -8615292698180843620, guid: ed372406804884944b315df9bacfe3ea, type: 3}
+    - {fileID: 744966594519276227, guid: 300ad440670279b45b80e0e32ec218d0, type: 3}
+    - {fileID: 5874148907703120886, guid: 300ad440670279b45b80e0e32ec218d0, type: 3}
+    - {fileID: -986497924118866726, guid: 300ad440670279b45b80e0e32ec218d0, type: 3}
+    - {fileID: -1316366368466998040, guid: 300ad440670279b45b80e0e32ec218d0, type: 3}
+    - {fileID: 744966594519276227, guid: 300ad440670279b45b80e0e32ec218d0, type: 3}
     - {fileID: -3802309177437961373, guid: cff4459750d807b4381d4c9cd4858a22, type: 3}
     - {fileID: -6221272965260906147, guid: cff4459750d807b4381d4c9cd4858a22, type: 3}
     - {fileID: 1650570393256186224, guid: cff4459750d807b4381d4c9cd4858a22, type: 3}
