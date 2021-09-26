@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
 
     private bool _sceneReady = false;
 
+    public static int LevelsCompleted = 0;
+
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
