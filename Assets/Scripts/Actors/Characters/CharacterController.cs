@@ -69,6 +69,11 @@ public class CharacterController : MonoBehaviour
         {
             Grounded = true;
         }
+
+        if (other.gameObject.CompareTag("Airstream"))
+        {
+            rb2D.AddForce(new Vector2(0,20));
+        }
     }
 
     private void OnCollisionExit2D(Collision2D other)

@@ -7,8 +7,8 @@ public class ActivatedObject : MonoBehaviour
     public ColorManager.GameColor color;
     
     public bool startEnabled;
-    [SerializeField] private SpriteRenderer spriteRenderer;
-    [SerializeField] private Collider2D collider2D;
+    [SerializeField] protected SpriteRenderer spriteRenderer;
+
 
     protected bool objectEnabled;
     protected void Start()
@@ -23,10 +23,10 @@ public class ActivatedObject : MonoBehaviour
         LeverManager.LeverChangeListener -= LeverChangeCheck;
     }
 
-    protected void LeverChangeCheck(ColorManager.GameColor activeColor, bool active)
+    private void LeverChangeCheck(ColorManager.GameColor activeColor, bool active)
     {
         if (color != activeColor) return;
-        SetObjectState(active);
+        SetObjectState(startEnabled ? !active : active);
     }
     
     protected virtual void SetObjectState(bool active){}
