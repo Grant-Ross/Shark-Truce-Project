@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
         _sceneReady = false;
         var tween = MoveTransition();
         SceneManager.sceneLoaded += OnLevelLoaded;
-        StartCoroutine(WaitForLoad(tween, levelName));
+        StartCoroutine(WaitForLoad(tween, levelName, AudioManager.Instance.GetMusic("Level")));
     }
 
     public void LoadScene(string sceneName)
@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
         _sceneReady = false;
         var tween = MoveTransition();
         SceneManager.sceneLoaded += OnSceneLoaded;
-        StartCoroutine(WaitForLoad(tween, sceneName));
+        StartCoroutine(WaitForLoad(tween, sceneName, AudioManager.Instance.GetMusic("Title")));
     }
 
     private Tween MoveTransition()
@@ -62,11 +62,12 @@ public class GameManager : MonoBehaviour
         Instantiate(gameController);
     }
 
-    private IEnumerator WaitForLoad(Tween tween, string sceneName)
+    private IEnumerator WaitForLoad(Tween tween, string sceneName, Music music)
     {
         while (tween.IsPlaying()) yield return null;
         SceneManager.LoadScene(sceneName);
         while (!_sceneReady) yield return null;
         (transitionObject.transform as RectTransform).DOAnchorPosX((transitionObject.transform as RectTransform).sizeDelta.x, .4f).SetEase(Ease.OutExpo);
+        AudioManager.Instance.PlayMusic(music.soundName);
     }
 }

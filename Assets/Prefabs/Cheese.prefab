@@ -16,8 +16,6 @@ MonoBehaviour:
   rb2D: {fileID: 5387177192335348689}
   groundCheck: {fileID: 5387177192335348694}
   animator: {fileID: 174274505884557377}
-  walkSpeed: 8
-  jumpPower: 14
 --- !u!1001 &5588353773579368245
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27,11 +25,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 526581660775555434, guid: 93bb0de52b89c784bb867f5ea3f07fd1, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 4.578125
+      value: 2.9875
       objectReference: {fileID: 0}
     - target: {fileID: 526581660775555434, guid: 93bb0de52b89c784bb867f5ea3f07fd1, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 4.578125
+      value: 3.7507856
       objectReference: {fileID: 0}
     - target: {fileID: 526581661691110626, guid: 93bb0de52b89c784bb867f5ea3f07fd1, type: 3}
       propertyPath: m_Name
@@ -92,7 +90,7 @@ PrefabInstance:
     - target: {fileID: 1798671303048235658, guid: 93bb0de52b89c784bb867f5ea3f07fd1, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 6278486218923484563, guid: ec8e8763f8ac7744a81b3b9b4de48c6f, type: 3}
+      objectReference: {fileID: -98265434735376890, guid: a671f681b545d324e82738dbb39247de, type: 3}
     - target: {fileID: 1798671303048235658, guid: 93bb0de52b89c784bb867f5ea3f07fd1, type: 3}
       propertyPath: m_Color.a
       value: 1

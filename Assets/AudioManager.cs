@@ -2,13 +2,15 @@ using System.Collections;
 using UnityEngine.Audio; 
 using UnityEngine;
 
-public class AudioManager : MonoBehaviour 
+public class AudioManager : MonoBehaviour
 {
+    private static AudioManager _instance;
+    public static AudioManager Instance => _instance ? _instance : _instance = FindObjectOfType<AudioManager>();
 
     private static Sound[] Sounds;
     private static Music[] Music;
 
-    private AudioSource musicSource;
+    [SerializeField] private AudioSource musicSource;
     private Music _currentMusic;
 
     private bool _musicSwitch = false;
@@ -21,7 +23,7 @@ public class AudioManager : MonoBehaviour
 
     private void CreateSounds()
     {
-        Sounds = (Sound[]) Resources.LoadAll("Sound Objects");
+        Sounds = Resources.LoadAll<Sound>("Sound Objects");
         
         foreach (var s in Sounds)
         {
@@ -34,9 +36,10 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    private static void CreateMusic()
+    private void CreateMusic()
     {
-        Music = (Music[]) Resources.LoadAll("Sound Objects/Music");
+        Music = Resources.LoadAll<Music>("Sound Objects/Music");
+        musicSource = gameObject.AddComponent<AudioSource>();
     }
 
     public static void PlaySound(string sound)
@@ -63,6 +66,15 @@ public class AudioManager : MonoBehaviour
                 return;
             }
         }
+    }
+
+    public Music GetMusic(string music)
+    {
+        foreach (var m in Music)
+        {
+            if (m.soundName == music) return m;
+        }
+        throw new MissingReferenceException();
     }
 
     private IEnumerator MusicRoutine(Music music)

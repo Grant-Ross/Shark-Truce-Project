@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db263923af38641df900509663eef06b, type: 3}
   m_Name: Title Theme
   m_EditorClassIdentifier: 
-  name: 
-  clip: {fileID: 0}
+  soundName: Title
+  clip: {fileID: 8300000, guid: 1e35e75ebc8b94b2d8f6f13db1ed5d0a, type: 3}
   volume: 1
   pitch: 1
   source: {fileID: 0}
-  head: {fileID: 0}
+  head: {fileID: 8300000, guid: bdd045770a4caa9499f7f156cf4cb741, type: 3}
