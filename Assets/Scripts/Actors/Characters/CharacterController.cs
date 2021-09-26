@@ -128,6 +128,7 @@ public class CharacterController : MonoBehaviour
     {
         CurrentState = State.Jumping;
         rb2D.velocity = new Vector2(rb2D.velocity.x, jumpPower);
+        AudioManager.PlaySound("Jump");
     }
 
 /*    protected void OnCollisionEnter2D(Collision2D other)

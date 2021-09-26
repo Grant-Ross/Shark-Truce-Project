@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.Audio; 
 using UnityEngine;
 
@@ -8,6 +9,10 @@ public class AudioManager : MonoBehaviour
     public static AudioManager Instance => _instance ? _instance : _instance = FindObjectOfType<AudioManager>();
 
     private static Sound[] Sounds;
+
+    private static Dictionary<string, AudioSource> SoundSources = new Dictionary<string, AudioSource>();
+    
+    
     private static Music[] Music;
 
     [SerializeField] private AudioSource musicSource;
@@ -28,30 +33,22 @@ public class AudioManager : MonoBehaviour
         foreach (var s in Sounds)
         {
             var source = gameObject.AddComponent<AudioSource>();
-            source.clip = s.clip;
-            source.volume = s.volume;
-            source.pitch = s.pitch;
-            
-            s.source = source;
+            s.source.clip = s.clip;
+            s.source.volume = s.volume;
+            s.source.pitch = s.pitch;
+            SoundSources.Add(s.soundName, source);
         }
     }
 
     private void CreateMusic()
     {
         Music = Resources.LoadAll<Music>("Sound Objects/Music");
-        musicSource = gameObject.AddComponent<AudioSource>();
+        //musicSource = gameObject.AddComponent<AudioSource>();
     }
 
     public static void PlaySound(string sound)
     {
-        foreach (var s in Sounds)
-        {
-            if (s.soundName == sound)
-            {
-                s.source.PlayOneShot(s.clip);
-                return;
-            }
-        }
+        SoundSources[sound].Play();
     }
 
     public void PlayMusic(string music)
