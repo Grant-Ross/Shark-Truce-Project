@@ -74,7 +74,7 @@ public class CharacterController : MonoBehaviour
             {
                 if (Velocity.x == 0)
                 {
-                    _landTimer = LandTime;
+                    _landTimer = LandTime - 0.1f;
                     CurrentState = State.Landing;
                 }
                 else
