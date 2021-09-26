@@ -21,7 +21,7 @@ public class CharacterController : MonoBehaviour
 
     public enum State
     {
-        Idle, Walking, Jumping, Peak, Falling, Landing
+        Idle, Walking, Jumping, Peak, Falling, Landing, Squish
     }
 
     private State _currentState;
@@ -70,8 +70,27 @@ public class CharacterController : MonoBehaviour
     {
         if (Grounded)
         {
+
+
+            if (Input.GetAxis("Vertical") < 0)
+            {
+                if (Velocity.x == 0)
+                {
+                    CurrentState = State.Landing;
+                }
+                else
+                {
+                    _landTimer = 0;
+                    CurrentState = State.Idle;
+                }
+            }else if (CurrentState == State.Landing && _landTimer <= 0)
+            {
+                CurrentState = State.Idle;
+            }
+         
             if (CurrentState == State.Falling) CurrentState = State.Landing;
             else if(_landTimer <= 0) CurrentState = Velocity.x != 0 ? State.Walking : State.Idle;
+
         }
         else if (!Grounded || Velocity.y != 0) ;
         {
@@ -79,6 +98,7 @@ public class CharacterController : MonoBehaviour
             else if (Velocity.y < -2f) CurrentState = State.Falling;
             else if(CurrentState == State.Jumping) CurrentState = State.Peak;
         }
+        animator.SetBool("Squish",Input.GetAxis("Vertical") < 0);
         
         if (!stateChanged) return;
         stateChanged = false;
