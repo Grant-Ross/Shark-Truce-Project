@@ -70,4 +70,9 @@ public class GameManager : MonoBehaviour
         (transitionObject.transform as RectTransform).DOAnchorPosX((transitionObject.transform as RectTransform).sizeDelta.x, .4f).SetEase(Ease.OutExpo);
         AudioManager.Instance.PlayMusic(music.soundName);
     }
+
+    public void LevelFinished()
+    {
+        LoadScene("LevelSelect");
+    }
 }
