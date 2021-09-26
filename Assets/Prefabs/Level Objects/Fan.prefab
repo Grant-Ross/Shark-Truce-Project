@@ -4843,7 +4843,7 @@ GameObject:
   - component: {fileID: 644319411550183881}
   - component: {fileID: 644319411550183882}
   - component: {fileID: 644319411550183883}
-  - component: {fileID: 644319411550183876}
+  - component: {fileID: 7868145330278313128}
   m_Layer: 0
   m_Name: Fan
   m_TagString: Ground
@@ -4860,7 +4860,7 @@ Transform:
   m_GameObject: {fileID: 644319411550183877}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.67, y: 0.36, z: -7.9480433}
-  m_LocalScale: {x: 1, y: 0.4325, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 644319410772159378}
   m_Father: {fileID: 0}
@@ -4906,8 +4906,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8013a6c3793e1ac4fb3b37e51e60b209, type: 3}
-  m_Color: {r: 0, g: 0, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 835e2606070d372418fb47ada5ed9b9b, type: 3}
+  m_Color: {r: 0.972549, g: 0.3137255, b: 0.47058824, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4929,10 +4929,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b6465ebef5fb024a9b4b1ccf8797d81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: 1
+  color: 0
   startEnabled: 0
   spriteRenderer: {fileID: 644319411550183881}
-  fanBody: {fileID: 644319411550183876}
+  fanBody: {fileID: 0}
   airZone: {fileID: 644319410772159383}
   pSystem: {fileID: 644319410772159376}
 --- !u!50 &644319411550183883
@@ -4956,8 +4956,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &644319411550183876
-BoxCollider2D:
+--- !u!70 &7868145330278313128
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4969,16 +4969,6 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.56, y: 2.56}
-    newSize: {x: 2.56, y: 2.56}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.56, y: 2.56}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0, y: -0.1}
+  m_Size: {x: 3.2, y: 2.5}
+  m_Direction: 1
