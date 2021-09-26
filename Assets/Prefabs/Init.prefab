@@ -85,6 +85,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7218629900838932609}
   - component: {fileID: 7218629900838932608}
+  - component: {fileID: 6251106108792574110}
   m_Layer: 0
   m_Name: Init
   m_TagString: Untagged
@@ -120,6 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameController: {fileID: 6193896423196129514, guid: 06642004bed71f642b6577d322cba71f, type: 3}
+<<<<<<< Updated upstream
   transitionObject: {fileID: 4174221083144705833}
 --- !u!1 &9103598503469895674
 GameObject:
@@ -205,11 +207,15 @@ MonoBehaviour:
   m_DynamicPixelsPerUnit: 1
   m_PresetInfoIsWorld: 0
 --- !u!114 &8891222274071511152
+=======
+--- !u!114 &6251106108792574110
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 9103598503469895674}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -221,3 +227,11 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+=======
+  m_GameObject: {fileID: 7218629900838932639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e32b3627c054144f6805d1fd5655d900, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+>>>>>>> Stashed changes
