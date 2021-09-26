@@ -1848,10 +1848,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Camera
       objectReference: {fileID: 0}
-    - target: {fileID: 3307037422873326379, guid: 092f9eb753619c14bb17596a3d84e10d, type: 3}
-      propertyPath: orthographic size
-      value: 15
-      objectReference: {fileID: 0}
     - target: {fileID: 3307037422873326548, guid: 092f9eb753619c14bb17596a3d84e10d, type: 3}
       propertyPath: m_RootOrder
       value: 0
