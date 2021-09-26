@@ -484,10 +484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: Character Switch
-    clip: {fileID: 8300000, guid: 8a361126899094c218dbe525181b48db, type: 3}
-    volume: 0
-    pitch: 1
+  - {fileID: 0}
 --- !u!4 &1507545331
 Transform:
   m_ObjectHideFlags: 0
@@ -582,7 +579,7 @@ PrefabInstance:
     - target: {fileID: 7836857292326672189, guid: 82d7917295ef30146a4e4ca6513db982, type: 3}
       propertyPath: level
       value: 
-      objectReference: {fileID: 102900000, guid: cf247d4093014254aa974c9ec2239bca, type: 3}
+      objectReference: {fileID: 102900000, guid: 839d3702bfbb1d34f98cba0c25b4a698, type: 3}
     - target: {fileID: 7836857292326672190, guid: 82d7917295ef30146a4e4ca6513db982, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

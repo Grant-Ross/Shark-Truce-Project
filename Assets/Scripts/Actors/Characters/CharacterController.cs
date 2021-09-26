@@ -10,8 +10,8 @@ public class CharacterController : MonoBehaviour
     [SerializeField] protected Collider2D groundCheck = null;
     [SerializeField] protected Animator animator;
 
-    public float walkSpeed;
-    public float jumpPower;
+    private const float walkSpeed = 10;
+    private  const float jumpPower = 16;
 
     protected Vector2 Velocity;
     protected bool Grounded;
@@ -74,7 +74,7 @@ public class CharacterController : MonoBehaviour
             {
                 if (Velocity.x == 0)
                 {
-                    _landTimer = LandTime;
+                    _landTimer = LandTime - 0.1f;
                     CurrentState = State.Landing;
                 }
                 else
@@ -157,7 +157,9 @@ public class CharacterController : MonoBehaviour
 
         if (other.gameObject.CompareTag("Airstream"))
         {
-            rb2D.AddForce(new Vector2(0,20));
+            
+            //rb2D.velocity = new Vector2(rb2D.velocity.x, Mathf.Clamp(rb2D.velocity.y, -20, 20));
+            if(rb2D.velocity.y < 13)rb2D.AddForce(new Vector2(0,18));
             Grounded = false;
         }
     }

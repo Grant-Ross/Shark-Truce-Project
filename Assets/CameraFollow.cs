@@ -1,12 +1,18 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
     private Transform focus;
 
-    private const float MoveSpeed = 5f;
+    private const float MoveSpeedX = 5f;
+    private const float MoveSpeedY = 2f;
+    private const float MoveSpeedYMax = 3f;
+
+    private bool lerpY = false;
 
     private void Awake()
     {
@@ -21,7 +27,20 @@ public class CameraFollow : MonoBehaviour
     private void FixedUpdate()
     {
         if (focus == null) focus = FindObjectOfType<CharacterController>().transform;
-        transform.position = Vector3.Lerp(transform.position, 
-            new Vector3(focus.position.x, transform.position.y, transform.position.z),MoveSpeed*Time.deltaTime);
+        var pos = transform.position;
+        var fPos = focus.position;
+
+        if (!lerpY) lerpY = (fPos.y - pos.y) > 3 | (fPos.y - pos.y) < -1;
+        else lerpY = !((pos.y - fPos.y) < .2f & (fPos.y - pos.y)  > -.1f);
+
+        var yDistance = Math.Abs((fPos.y - pos.y));
+        var yDelta = Mathf.Clamp(MoveSpeedY * (yDistance/4f), MoveSpeedY, MoveSpeedYMax);
+        
+        
+        var moveX = Mathf.Lerp(pos.x, fPos.x, MoveSpeedX*Time.deltaTime);
+        var moveY = lerpY ? Mathf.Lerp(pos.y, fPos.y, yDelta*Time.deltaTime) : pos.y;
+        
+        
+        transform.position = new Vector3(moveX, moveY, pos.z);
     }
 }
