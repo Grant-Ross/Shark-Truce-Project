@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject gameController;
     [SerializeField] private GameObject transitionObject;
 
+    private static HashSet<string> finishedLevels = new HashSet<string>();
+
     private bool _sceneReady = false;
 
     public static int LevelsCompleted = 0;
@@ -73,6 +75,11 @@ public class GameManager : MonoBehaviour
 
     public void LevelFinished()
     {
+        if (!finishedLevels.Contains(SceneManager.GetActiveScene().name))
+        {
+            LevelsCompleted += 1;
+            finishedLevels.Add(SceneManager.GetActiveScene().name);
+        }
         LoadScene("LevelSelect");
     }
 }
