@@ -131,12 +131,20 @@ public class CharacterController : MonoBehaviour
         rb2D.velocity = new Vector2(rb2D.velocity.x, jumpPower);
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+/*    protected void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Player"))
+        {
+            Grounded = true;
+        }
+    }*/
+
+    protected void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("End")) GameController.FinishedCharacters.Add(character);
     }
 
-    private void OnTriggerExit2D(Collider2D other)
+    protected void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("End")) GameController.FinishedCharacters.Remove(character);
     }
@@ -151,10 +159,11 @@ public class CharacterController : MonoBehaviour
         if (other.gameObject.CompareTag("Airstream"))
         {
             rb2D.AddForce(new Vector2(0,20));
+            Grounded = false;
         }
     }
 
-    private void OnCollisionExit2D(Collision2D other)
+    protected void OnCollisionExit2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Player"))
         {
