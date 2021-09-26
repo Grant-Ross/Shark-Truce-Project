@@ -12,7 +12,7 @@ public class TitleScreen : MonoBehaviour
     {
         var titlePos = (title.transform as RectTransform).anchoredPosition.y;
         (title.transform as RectTransform).anchoredPosition = new Vector2((title.transform as RectTransform).anchoredPosition.x, 600);
-        (title.transform as RectTransform).DOAnchorPosY( titlePos, 3).SetEase(Ease.OutBounce);
+        (title.transform as RectTransform).DOAnchorPosY( titlePos, 2.5f).SetEase(Ease.OutBounce);
     }
 
     public void StartButton()

@@ -4489,5 +4489,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: carls_bkgd
       objectReference: {fileID: 0}
+    - target: {fileID: 2837739641583559101, guid: 8900abebf9d17b042be233f37d6ae3af, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8900abebf9d17b042be233f37d6ae3af, type: 3}
