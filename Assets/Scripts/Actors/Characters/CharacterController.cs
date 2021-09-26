@@ -11,7 +11,7 @@ public class CharacterController : MonoBehaviour
     [SerializeField] protected Animator animator;
 
     private const float walkSpeed = 10;
-    private  const float jumpPower = 16;
+    private  const float jumpPower = 18;
 
     protected Vector2 Velocity;
     protected bool Grounded;
