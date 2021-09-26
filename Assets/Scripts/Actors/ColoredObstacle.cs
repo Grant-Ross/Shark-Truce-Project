@@ -5,12 +5,15 @@ using UnityEngine;
 
 public class ColoredObstacle : ActivatedObject
 {
-
+    [SerializeField] private Collider2D collider2D;
     protected override void SetObjectState(bool active)
     {
-        if (objectEnabled == active) return;
-        else objectEnabled = active;
-        
+        //if (objectEnabled == active) return;
+        //else objectEnabled = active;
+        collider2D.enabled = active;
+        var c = spriteRenderer.color;
+        c.a = active ? 1 : .5f;
+        spriteRenderer.color = c;
     }
     
 
