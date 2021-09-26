@@ -3,10 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class SelectionBar : MonoBehaviour
 {
     [SerializeField] private GameObject buttonPrefab;
+    [SerializeField] private ToggleGroup group;
 
     [Serializable]
     public struct CharButton
@@ -35,7 +37,7 @@ public class SelectionBar : MonoBehaviour
         foreach (var c in GameController.CurrentCharacters.Keys)
         {
             var button = Instantiate(buttonPrefab, (transform as RectTransform));
-            button.GetComponent<CharacterButton>().SetUp(GetButton(c));
+            button.GetComponent<CharacterButton>().SetUp(group,GetButton(c));
             currentButtons.Add(button);
             if(EventSystem.current.firstSelectedGameObject == null) EventSystem.current.firstSelectedGameObject = button;
         }

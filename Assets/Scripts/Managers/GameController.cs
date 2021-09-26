@@ -30,7 +30,6 @@ public class GameController : MonoBehaviour
     {
         
         _currentCharacter = Character.None;
-        SwitchCharacter(Character.Patty);
         
     }
 
@@ -52,24 +51,26 @@ public class GameController : MonoBehaviour
     {
         if(CurrentCharacters == null) CurrentCharacters = new Dictionary<Character, CharacterController>();
         CurrentCharacters.Add(character, charController);
+        if(character == Character.Patty) SwitchCharacter(Character.Patty);
     }
 
 
     private void ResetCharacters()
     {
         CurrentCharacters = new Dictionary<Character, CharacterController>();
+        FinishedCharacters = new HashSet<Character>();
     }
 
     private void ResetLevel()
     {
+        ResetCharacters();
         GameManager.Instance.LoadLevel(SceneManager.GetActiveScene().name);
     }
 
     private void FinishLevel()
     {
         StageFinishedListener?.Invoke();
-        CurrentCharacters = new Dictionary<Character, CharacterController>();
-        FinishedCharacters = new HashSet<Character>();
+        ResetCharacters();
         GameManager.Instance.LoadScene("LevelSelect");
     }
     

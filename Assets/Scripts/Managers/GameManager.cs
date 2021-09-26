@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
+using DG.Tweening.Core;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,6 +11,9 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance => _instance ? _instance : _instance = FindObjectOfType<GameManager>();
     
     [SerializeField] private GameObject gameController;
+    [SerializeField] private GameObject transitionObject;
+
+    private bool _sceneReady = false;
 
     private void Awake()
     {
@@ -18,19 +23,48 @@ public class GameManager : MonoBehaviour
 
     public void LoadLevel(string levelName)
     {
+        _sceneReady = false;
+        var tween = MoveTransition();
         SceneManager.sceneLoaded += OnLevelLoaded;
-        LoadScene(levelName);
+        StartCoroutine(WaitForLoad(tween, levelName));
     }
 
     public void LoadScene(string sceneName)
     {
-        SceneManager.LoadScene(sceneName);
+        _sceneReady = false;
+        var tween = MoveTransition();
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        StartCoroutine(WaitForLoad(tween, sceneName));
     }
 
+    private Tween MoveTransition()
+    {
+        (transitionObject.transform as RectTransform).anchoredPosition =
+            new Vector2(-(transitionObject.transform as RectTransform).sizeDelta.x,0);
+        return (transitionObject.transform as RectTransform).DOAnchorPosX(0, .4f).SetEase(Ease.OutExpo);
+       
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+        _sceneReady = true;
+    }
+
+    
     private void OnLevelLoaded(Scene scene, LoadSceneMode mode)
     {
         
         SceneManager.sceneLoaded -= OnLevelLoaded;
+        _sceneReady = true;
         Instantiate(gameController);
+    }
+
+    private IEnumerator WaitForLoad(Tween tween, string sceneName)
+    {
+        while (tween.IsPlaying()) yield return null;
+        SceneManager.LoadScene(sceneName);
+        while (!_sceneReady) yield return null;
+        (transitionObject.transform as RectTransform).DOAnchorPosX((transitionObject.transform as RectTransform).sizeDelta.x, .4f).SetEase(Ease.OutExpo);
     }
 }

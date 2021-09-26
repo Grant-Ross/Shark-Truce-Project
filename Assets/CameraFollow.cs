@@ -20,6 +20,7 @@ public class CameraFollow : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (focus == null) focus = FindObjectOfType<CharacterController>().transform;
         transform.position = Vector3.Lerp(transform.position, 
             new Vector3(focus.position.x, transform.position.y, transform.position.z),MoveSpeed*Time.deltaTime);
     }

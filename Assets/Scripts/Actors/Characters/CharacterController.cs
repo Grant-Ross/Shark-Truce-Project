@@ -21,17 +21,17 @@ public class CharacterController : MonoBehaviour
     
 
 
-    private void Start()
+    protected void Start()
     {
         GameController.Instance.AddCharacter(character, this);
         GameController.CharacterSwitchListener += OnCharacterSwitch;
-        GameController.StageFinishedListener += OnLevelEnd;
+        
     }
 
-    private void OnLevelEnd()
+
+    private void OnDestroy()
     {
         GameController.CharacterSwitchListener -= OnCharacterSwitch;
-        GameController.StageFinishedListener -= OnLevelEnd;
     }
 
     protected virtual void Update()
