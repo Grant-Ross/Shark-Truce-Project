@@ -15,6 +15,7 @@ MonoBehaviour:
   character: 2
   rb2D: {fileID: 5387177192335348689}
   groundCheck: {fileID: 5387177192335348694}
+  animator: {fileID: 0}
   walkSpeed: 8
   jumpPower: 14
 --- !u!1001 &5588353773579368245
@@ -26,11 +27,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 526581660775555434, guid: 93bb0de52b89c784bb867f5ea3f07fd1, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 2.93
+      value: 4.578125
       objectReference: {fileID: 0}
     - target: {fileID: 526581660775555434, guid: 93bb0de52b89c784bb867f5ea3f07fd1, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 2.93
+      value: 4.578125
       objectReference: {fileID: 0}
     - target: {fileID: 526581661691110626, guid: 93bb0de52b89c784bb867f5ea3f07fd1, type: 3}
       propertyPath: m_Name
@@ -108,6 +109,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5757561420641113972, guid: 93bb0de52b89c784bb867f5ea3f07fd1, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: da53aa2596e7c8f4ba5a186bbdaf268c, type: 2}
     m_RemovedComponents:
     - {fileID: 7333310516465349433, guid: 93bb0de52b89c784bb867f5ea3f07fd1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 93bb0de52b89c784bb867f5ea3f07fd1, type: 3}
