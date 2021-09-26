@@ -15,6 +15,7 @@ MonoBehaviour:
   character: 4
   rb2D: {fileID: 2469857479668983095}
   groundCheck: {fileID: 2469857479668983088}
+  animator: {fileID: 7705253152212719271}
   walkSpeed: 8
   jumpPower: 14
 --- !u!1001 &2668516307667222995
@@ -26,11 +27,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 526581660775555434, guid: 93bb0de52b89c784bb867f5ea3f07fd1, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 2.93
+      value: 4.578125
       objectReference: {fileID: 0}
     - target: {fileID: 526581660775555434, guid: 93bb0de52b89c784bb867f5ea3f07fd1, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 2.93
+      value: 4.578125
       objectReference: {fileID: 0}
     - target: {fileID: 526581661691110626, guid: 93bb0de52b89c784bb867f5ea3f07fd1, type: 3}
       propertyPath: m_Name
@@ -96,6 +97,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5757561420641113972, guid: 93bb0de52b89c784bb867f5ea3f07fd1, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 7369f10a84e7bb94282097658ddad420, type: 2}
     m_RemovedComponents:
     - {fileID: 7333310516465349433, guid: 93bb0de52b89c784bb867f5ea3f07fd1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 93bb0de52b89c784bb867f5ea3f07fd1, type: 3}
@@ -112,5 +117,10 @@ Rigidbody2D:
 --- !u!68 &2469857479668983088 stripped
 EdgeCollider2D:
   m_CorrespondingSourceObject: {fileID: 526581661691110627, guid: 93bb0de52b89c784bb867f5ea3f07fd1, type: 3}
+  m_PrefabInstance: {fileID: 2668516307667222995}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &7705253152212719271 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5757561420641113972, guid: 93bb0de52b89c784bb867f5ea3f07fd1, type: 3}
   m_PrefabInstance: {fileID: 2668516307667222995}
   m_PrefabAsset: {fileID: 0}

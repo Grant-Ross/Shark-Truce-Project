@@ -15,7 +15,7 @@ MonoBehaviour:
   character: 3
   rb2D: {fileID: 2547411145580849016}
   groundCheck: {fileID: 2547411145580849023}
-  animator: {fileID: 0}
+  animator: {fileID: 7778284251936216296}
   walkSpeed: 8
   jumpPower: 14
   seedBullet: {fileID: 7175928978771041667, guid: e0d69d159f7435e479e85d1793f54886, type: 3}
@@ -118,5 +118,10 @@ Rigidbody2D:
 --- !u!68 &2547411145580849023 stripped
 EdgeCollider2D:
   m_CorrespondingSourceObject: {fileID: 526581661691110627, guid: 93bb0de52b89c784bb867f5ea3f07fd1, type: 3}
+  m_PrefabInstance: {fileID: 2599970940643361692}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &7778284251936216296 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5757561420641113972, guid: 93bb0de52b89c784bb867f5ea3f07fd1, type: 3}
   m_PrefabInstance: {fileID: 2599970940643361692}
   m_PrefabAsset: {fileID: 0}

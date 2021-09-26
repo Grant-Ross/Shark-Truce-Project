@@ -39,7 +39,7 @@ public class CharacterController : MonoBehaviour
 
     private bool stateChanged = false;
     private float _landTimer = 0;
-    private const float LandTime = .2f;
+    private const float LandTime = .12f;
 
     protected void Start()
     {
@@ -70,18 +70,17 @@ public class CharacterController : MonoBehaviour
     {
         if (Grounded)
         {
-
-
             if (Input.GetAxis("Vertical") < 0)
             {
                 if (Velocity.x == 0)
                 {
+                    _landTimer = LandTime;
                     CurrentState = State.Landing;
                 }
                 else
                 {
                     _landTimer = 0;
-                    CurrentState = State.Idle;
+                    
                 }
             }else if (CurrentState == State.Landing && _landTimer <= 0)
             {
@@ -98,7 +97,7 @@ public class CharacterController : MonoBehaviour
             else if (Velocity.y < -2f) CurrentState = State.Falling;
             else if(CurrentState == State.Jumping) CurrentState = State.Peak;
         }
-        animator.SetBool("Squish",Input.GetAxis("Vertical") < 0);
+        //animator.SetBool("Squish",Input.GetAxis("Vertical") < 0);
         
         if (!stateChanged) return;
         stateChanged = false;

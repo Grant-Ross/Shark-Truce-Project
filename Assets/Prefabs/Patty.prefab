@@ -9,11 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 526581660775555434, guid: 93bb0de52b89c784bb867f5ea3f07fd1, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 2.93
+      value: 4.578125
       objectReference: {fileID: 0}
     - target: {fileID: 526581660775555434, guid: 93bb0de52b89c784bb867f5ea3f07fd1, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 2.93
+      value: 4.578125
       objectReference: {fileID: 0}
     - target: {fileID: 526581661691110626, guid: 93bb0de52b89c784bb867f5ea3f07fd1, type: 3}
       propertyPath: m_Name
@@ -79,5 +79,9 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5757561420641113972, guid: 93bb0de52b89c784bb867f5ea3f07fd1, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: a49fbc162a058244c9d982efda643fc3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93bb0de52b89c784bb867f5ea3f07fd1, type: 3}

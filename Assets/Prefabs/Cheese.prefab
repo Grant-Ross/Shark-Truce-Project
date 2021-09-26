@@ -15,7 +15,7 @@ MonoBehaviour:
   character: 2
   rb2D: {fileID: 5387177192335348689}
   groundCheck: {fileID: 5387177192335348694}
-  animator: {fileID: 0}
+  animator: {fileID: 174274505884557377}
   walkSpeed: 8
   jumpPower: 14
 --- !u!1001 &5588353773579368245
@@ -129,5 +129,10 @@ Rigidbody2D:
 --- !u!68 &5387177192335348694 stripped
 EdgeCollider2D:
   m_CorrespondingSourceObject: {fileID: 526581661691110627, guid: 93bb0de52b89c784bb867f5ea3f07fd1, type: 3}
+  m_PrefabInstance: {fileID: 5588353773579368245}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &174274505884557377 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5757561420641113972, guid: 93bb0de52b89c784bb867f5ea3f07fd1, type: 3}
   m_PrefabInstance: {fileID: 5588353773579368245}
   m_PrefabAsset: {fileID: 0}
