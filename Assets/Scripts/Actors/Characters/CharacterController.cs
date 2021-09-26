@@ -142,6 +142,7 @@ public class CharacterController : MonoBehaviour
     protected void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("End")) GameController.FinishedCharacters.Add(character);
+        if(other.gameObject.CompareTag("Kill Plane")) GameController.Instance.ResetLevel();
     }
 
     protected void OnTriggerExit2D(Collider2D other)

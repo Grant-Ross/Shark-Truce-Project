@@ -63,7 +63,7 @@ public class GameController : MonoBehaviour
         _levelFinished = false;
     }
 
-    private void ResetLevel()
+    public void ResetLevel()
     {
         ResetCharacters();
         GameManager.Instance.LoadLevel(SceneManager.GetActiveScene().name);
