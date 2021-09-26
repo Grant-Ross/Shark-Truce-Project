@@ -25,7 +25,8 @@ public class ColoredObstacleEditor : Editor
     public SerializedProperty
         color_Prop,
         renderer_Prop,
-        colliderProp;
+        colliderProp,
+        enabledProp;
 
     public ColorManager.GameColor color;
      
@@ -34,21 +35,21 @@ public class ColoredObstacleEditor : Editor
         color_Prop = serializedObject.FindProperty("color");
         renderer_Prop = serializedObject.FindProperty("spriteRenderer");
         colliderProp = serializedObject.FindProperty("collider2D");
+        enabledProp = serializedObject.FindProperty("startEnabled");
         color = (ColorManager.GameColor) color_Prop.enumValueIndex;
     }
      
     public override void OnInspectorGUI() {
         serializedObject.Update ();
 
-        //color_Prop.enumValueIndex = (int)(ColorManager.GameColor) EditorGUILayout.EnumPopup((ColorManager.GameColor)color_Prop.enumValueIndex);
-        color = (ColorManager.GameColor) EditorGUILayout.EnumPopup((ColorManager.GameColor)color);
+        color = (ColorManager.GameColor) EditorGUILayout.EnumPopup(color);
         color_Prop.enumValueIndex = (int) color;
         renderer_Prop.objectReferenceValue = (SpriteRenderer) EditorGUILayout.ObjectField(renderer_Prop.objectReferenceValue, 
             typeof(SpriteRenderer),true);
         (renderer_Prop.objectReferenceValue as SpriteRenderer).color = ColorManager.GetHue(color);
         
         colliderProp.objectReferenceValue = (Collider2D) EditorGUILayout.ObjectField(colliderProp.objectReferenceValue, typeof(Collider2D),true);
-
+        enabledProp.boolValue = EditorGUILayout.Toggle("Start Enabled", enabledProp.boolValue);
         serializedObject.ApplyModifiedProperties();
     }
          

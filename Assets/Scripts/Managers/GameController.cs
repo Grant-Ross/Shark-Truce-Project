@@ -28,7 +28,7 @@ public class GameController : MonoBehaviour
 
     private void Start()
     {
-        
+        CurrentCharacters = new Dictionary<Character, CharacterController>();
         _currentCharacter = Character.None;
         
     }

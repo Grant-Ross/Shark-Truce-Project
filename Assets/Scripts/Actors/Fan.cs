@@ -26,7 +26,9 @@ public class FanEditor : Editor
         renderer_Prop,
         colliderProp,
         airTriggerProp,
-        particleProp;
+        particleProp,
+        enabledProp;
+    
 
     public ColorManager.GameColor color;
      
@@ -37,6 +39,7 @@ public class FanEditor : Editor
         colliderProp = serializedObject.FindProperty("fanBody");
         airTriggerProp = serializedObject.FindProperty("airZone");
         particleProp = serializedObject.FindProperty("pSystem");
+        enabledProp = serializedObject.FindProperty("startEnabled");
         color = (ColorManager.GameColor) color_Prop.enumValueIndex;
     }
      
@@ -54,6 +57,7 @@ public class FanEditor : Editor
         airTriggerProp.objectReferenceValue = (Collider2D) EditorGUILayout.ObjectField("Air Zone",airTriggerProp.objectReferenceValue, typeof(Collider2D),true);
         particleProp.objectReferenceValue = (ParticleSystem) EditorGUILayout.ObjectField("Air Particles",particleProp.objectReferenceValue, typeof(ParticleSystem),true);
 
+        enabledProp.boolValue = EditorGUILayout.Toggle("Start Enabled", enabledProp.boolValue);
         serializedObject.ApplyModifiedProperties();
     }
          
