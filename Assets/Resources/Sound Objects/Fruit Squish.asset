@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 950c66ff00b384bd28b3155b037af6fc, type: 3}
   m_Name: Fruit Squish
   m_EditorClassIdentifier: 
-  name: Fruit Squish
+  soundName: Fruit Squish
   clip: {fileID: 8300000, guid: 50bd8242872b2bc4bafdd16c45c73d5b, type: 3}
   volume: 1
   pitch: 1

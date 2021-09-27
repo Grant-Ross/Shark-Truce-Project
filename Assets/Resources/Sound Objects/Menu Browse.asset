@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 950c66ff00b384bd28b3155b037af6fc, type: 3}
   m_Name: Menu Browse
   m_EditorClassIdentifier: 
-  name: Menu Browse
+  soundName: Menu Browse
   clip: {fileID: 8300000, guid: 39743c6f3580d3f4f89c67d9517225cc, type: 3}
   volume: 1
   pitch: 1

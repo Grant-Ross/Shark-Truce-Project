@@ -32,6 +32,7 @@ public class CharacterButton : MonoBehaviour
     
     private void SwapCharacter()
     {
+        //AudioManager.PlaySound("Menu Browse");
         GameController.Instance.SwitchCharacter(_character);
     }
 }

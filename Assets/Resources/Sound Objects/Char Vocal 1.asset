@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 950c66ff00b384bd28b3155b037af6fc, type: 3}
   m_Name: Char Vocal 1
   m_EditorClassIdentifier: 
-  name: Character Vocal 1
+  soundName: Voice 1
   clip: {fileID: 8300000, guid: 08874246365e11a4784edd4b5d4a101d, type: 3}
   volume: 1
   pitch: 1

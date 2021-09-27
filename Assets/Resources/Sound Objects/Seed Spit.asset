@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 950c66ff00b384bd28b3155b037af6fc, type: 3}
   m_Name: Seed Spit
   m_EditorClassIdentifier: 
-  name: Seed Spit
+  soundName: Seed
   clip: {fileID: 8300000, guid: 52ba2f26b0e76214f9fed3230b3dab83, type: 3}
   volume: 1
   pitch: 1

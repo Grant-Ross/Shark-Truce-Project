@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 950c66ff00b384bd28b3155b037af6fc, type: 3}
   m_Name: Meat Squish
   m_EditorClassIdentifier: 
-  name: Meat Squish
+  soundName: Meat Squish
   clip: {fileID: 8300000, guid: 17a9734b5ca9bc84fab74cf94e747017, type: 3}
   volume: 1
   pitch: 1
