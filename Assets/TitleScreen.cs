@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using DG.Tweening;
-using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 
 public class TitleScreen : MonoBehaviour

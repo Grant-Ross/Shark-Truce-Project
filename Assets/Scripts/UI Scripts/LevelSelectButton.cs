@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelSelectButton : MonoBehaviour
 {
-    public SceneAsset level;
+    public string level;
     
     public void LoadLevel()
     {
-        GameManager.Instance.LoadLevel(level.name);
+        GameManager.Instance.LoadLevel(level);
     }
 
     public void OnClick()

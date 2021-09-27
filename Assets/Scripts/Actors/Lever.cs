@@ -1,8 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEditor;
-using UnityEditor.UI;
 using UnityEngine;
 
 public class Lever : MonoBehaviour
@@ -40,7 +36,7 @@ public class Lever : MonoBehaviour
         else _swapReady = true;
     }
 }
-
+#if UNITY_EDITOR
 [CustomEditor(typeof(Lever))]
 public class LeverEditor : Editor
 {
@@ -85,4 +81,4 @@ public class LeverEditor : Editor
         
 }
 
-
+#endif

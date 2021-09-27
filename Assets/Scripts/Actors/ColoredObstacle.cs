@@ -18,6 +18,7 @@ public class ColoredObstacle : ActivatedObject
     
 
 }
+#if UNITY_EDITOR
 [CustomEditor(typeof(ColoredObstacle))]
 public class ColoredObstacleEditor : Editor
 {
@@ -56,3 +57,4 @@ public class ColoredObstacleEditor : Editor
          
         
 }
+#endif

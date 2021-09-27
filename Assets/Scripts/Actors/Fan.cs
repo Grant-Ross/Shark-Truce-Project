@@ -17,6 +17,7 @@ public class Fan : ActivatedObject
         airZone.enabled = active;
     }
 }
+#if UNITY_EDITOR
 [CustomEditor(typeof(Fan))]
 public class FanEditor : Editor
 {
@@ -64,3 +65,4 @@ public class FanEditor : Editor
          
         
 }
+#endif

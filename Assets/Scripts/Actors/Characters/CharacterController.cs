@@ -9,6 +9,9 @@ public class CharacterController : MonoBehaviour
     [SerializeField] protected Rigidbody2D rb2D = null;
     [SerializeField] protected Collider2D groundCheck = null;
     [SerializeField] protected Animator animator;
+    [SerializeField] protected AudioSource audioSource;
+    [SerializeField] protected AudioClip jump;
+    [SerializeField] protected AudioClip land;
 
     private const float walkSpeed = 10;
     private  const float jumpPower = 18;
