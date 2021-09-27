@@ -13,12 +13,16 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject gameController;
     [SerializeField] private GameObject transitionObject;
 
+    private static HashSet<string> finishedLevels = new HashSet<string>();
+
     private bool _sceneReady = false;
+
+    public static int LevelsCompleted = 0;
 
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
-        LoadScene("LevelSelect");
+        LoadScene("TitleScreen");
     }
 
     public void LoadLevel(string levelName)
@@ -26,7 +30,7 @@ public class GameManager : MonoBehaviour
         _sceneReady = false;
         var tween = MoveTransition();
         SceneManager.sceneLoaded += OnLevelLoaded;
-        StartCoroutine(WaitForLoad(tween, levelName));
+        StartCoroutine(WaitForLoad(tween, levelName, AudioManager.Instance.GetMusic("Level")));
     }
 
     public void LoadScene(string sceneName)
@@ -34,7 +38,7 @@ public class GameManager : MonoBehaviour
         _sceneReady = false;
         var tween = MoveTransition();
         SceneManager.sceneLoaded += OnSceneLoaded;
-        StartCoroutine(WaitForLoad(tween, sceneName));
+        StartCoroutine(WaitForLoad(tween, sceneName, AudioManager.Instance.GetMusic("Title")));
     }
 
     private Tween MoveTransition()
@@ -60,11 +64,22 @@ public class GameManager : MonoBehaviour
         Instantiate(gameController);
     }
 
-    private IEnumerator WaitForLoad(Tween tween, string sceneName)
+    private IEnumerator WaitForLoad(Tween tween, string sceneName, Music music)
     {
         while (tween.IsPlaying()) yield return null;
         SceneManager.LoadScene(sceneName);
         while (!_sceneReady) yield return null;
         (transitionObject.transform as RectTransform).DOAnchorPosX((transitionObject.transform as RectTransform).sizeDelta.x, .4f).SetEase(Ease.OutExpo);
+        AudioManager.Instance.PlayMusic(music.soundName);
+    }
+
+    public void LevelFinished()
+    {
+        if (!finishedLevels.Contains(SceneManager.GetActiveScene().name))
+        {
+            LevelsCompleted += 1;
+            finishedLevels.Add(SceneManager.GetActiveScene().name);
+        }
+        LoadScene("LevelSelect");
     }
 }

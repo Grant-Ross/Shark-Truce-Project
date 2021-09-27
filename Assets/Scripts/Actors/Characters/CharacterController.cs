@@ -11,7 +11,7 @@ public class CharacterController : MonoBehaviour
     [SerializeField] protected Animator animator;
 
     private const float walkSpeed = 10;
-    private  const float jumpPower = 16;
+    private  const float jumpPower = 18;
 
     protected Vector2 Velocity;
     protected bool Grounded;
@@ -128,6 +128,7 @@ public class CharacterController : MonoBehaviour
     {
         CurrentState = State.Jumping;
         rb2D.velocity = new Vector2(rb2D.velocity.x, jumpPower);
+        AudioManager.PlaySound("Jump");
     }
 
 /*    protected void OnCollisionEnter2D(Collision2D other)
@@ -141,6 +142,7 @@ public class CharacterController : MonoBehaviour
     protected void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("End")) GameController.FinishedCharacters.Add(character);
+        if(other.gameObject.CompareTag("Kill Plane")) GameController.Instance.ResetLevel();
     }
 
     protected void OnTriggerExit2D(Collider2D other)

@@ -11,4 +11,15 @@ public class LevelSelectButton : MonoBehaviour
     {
         GameManager.Instance.LoadLevel(level.name);
     }
+
+    public void OnSelect()
+    {
+        (transform as RectTransform).localScale = new Vector3(1.2f,1.2f,1);
+    }
+
+    public void OnDeselect()
+    {
+        (transform as RectTransform).localScale = new Vector3(1,1,1);
+    }
+    
 }

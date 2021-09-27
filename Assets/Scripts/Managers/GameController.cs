@@ -25,11 +25,13 @@ public class GameController : MonoBehaviour
     public static event Action<Character> CharacterSwitchListener;
     public static event Action StageFinishedListener;
 
+    private bool _levelFinished = false;
+
 
     private void Start()
     {
         _currentCharacter = Character.None;
-        
+        _levelFinished = false;
     }
 
     private void Update()
@@ -58,9 +60,10 @@ public class GameController : MonoBehaviour
     {
         CurrentCharacters = new Dictionary<Character, CharacterController>();
         FinishedCharacters = new HashSet<Character>();
+        _levelFinished = false;
     }
 
-    private void ResetLevel()
+    public void ResetLevel()
     {
         ResetCharacters();
         GameManager.Instance.LoadLevel(SceneManager.GetActiveScene().name);
@@ -68,9 +71,20 @@ public class GameController : MonoBehaviour
 
     private void FinishLevel()
     {
+        if (_levelFinished) return;
+        _levelFinished = true;
         StageFinishedListener?.Invoke();
         ResetCharacters();
-        GameManager.Instance.LoadScene("LevelSelect");
+        StartCoroutine(FinishSequence());
+    }
+
+    private IEnumerator FinishSequence()
+    {
+        
+        yield return new WaitForSeconds(.6f);
+        FindObjectOfType<FinishPlate>().StartFinishSequence();
+        yield return new WaitForSeconds(2.5f);
+        GameManager.Instance.LevelFinished();
     }
     
 }

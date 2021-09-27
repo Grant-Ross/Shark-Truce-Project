@@ -9,6 +9,8 @@ public class Lever : MonoBehaviour
 {
     public ColorManager.GameColor color;
     [SerializeField] private SpriteRenderer spriteRenderer;
+    public Sprite offSprite;
+    public Sprite onSprite;
 
     private const float Cooldown = .1f;
     private float _timer = 0;
@@ -27,6 +29,7 @@ public class Lever : MonoBehaviour
             _timer = Cooldown;
             _swapReady = false;
             _active = !_active;
+            spriteRenderer.sprite = _active ? onSprite : offSprite;
             LeverManager.OnLeverChange(color,_active);
         }
     }
@@ -44,7 +47,9 @@ public class LeverEditor : Editor
     //public SerializedObject leverObject;
     public SerializedProperty
         color_Prop,
-        renderer_Prop;
+        renderer_Prop,
+        onSpriteProp,
+        offSpriteProp;
 
     public ColorManager.GameColor color;
      
@@ -52,6 +57,8 @@ public class LeverEditor : Editor
     {
         color_Prop = serializedObject.FindProperty("color");
         renderer_Prop = serializedObject.FindProperty("spriteRenderer");
+        onSpriteProp = serializedObject.FindProperty("onSprite");
+        offSpriteProp = serializedObject.FindProperty("offSprite");
         color = (ColorManager.GameColor) color_Prop.enumValueIndex;
     }
      
@@ -65,6 +72,11 @@ public class LeverEditor : Editor
         renderer_Prop.objectReferenceValue = (SpriteRenderer) EditorGUILayout.ObjectField(renderer_Prop.objectReferenceValue, 
             typeof(SpriteRenderer),true);
         (renderer_Prop.objectReferenceValue as SpriteRenderer).color = ColorManager.GetHue(color);
+
+        onSpriteProp.objectReferenceValue =
+            (Sprite) EditorGUILayout.ObjectField("On Sprite", onSpriteProp.objectReferenceValue, typeof(Sprite), false);
+        offSpriteProp.objectReferenceValue =
+            (Sprite) EditorGUILayout.ObjectField("Off Sprite", offSpriteProp.objectReferenceValue, typeof(Sprite), false);
 
         serializedObject.ApplyModifiedProperties();
     }
