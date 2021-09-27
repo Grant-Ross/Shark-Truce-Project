@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 950c66ff00b384bd28b3155b037af6fc, type: 3}
   m_Name: Finish Timer Ring
   m_EditorClassIdentifier: 
-  name: Goal Timer Ring
+  soundName: Finish Time
   clip: {fileID: 8300000, guid: 2ee140c4d08c0c449856e2563010daa4, type: 3}
   volume: 1
   pitch: 1

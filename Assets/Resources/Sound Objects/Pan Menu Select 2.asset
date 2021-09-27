@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 950c66ff00b384bd28b3155b037af6fc, type: 3}
   m_Name: Pan Menu Select 2
   m_EditorClassIdentifier: 
-  name: Pan / Menu Select
+  soundName: pan 2
   clip: {fileID: 8300000, guid: bb4d7b65afc242649889918344aae303, type: 3}
   volume: 1
   pitch: 1

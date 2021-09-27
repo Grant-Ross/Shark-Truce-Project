@@ -22,6 +22,11 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
+        
+    }
+
+    private void Start()
+    {
         LoadScene("TitleScreen");
     }
 

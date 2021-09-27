@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 950c66ff00b384bd28b3155b037af6fc, type: 3}
   m_Name: MMMM 2
   m_EditorClassIdentifier: 
-  name: MMMM 2
+  soundName: Yum 2
   clip: {fileID: 8300000, guid: 677d33580ec74724b9cd93167e0dbee5, type: 3}
   volume: 1
   pitch: 1

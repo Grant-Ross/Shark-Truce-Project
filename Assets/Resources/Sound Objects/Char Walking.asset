@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 950c66ff00b384bd28b3155b037af6fc, type: 3}
   m_Name: Char Walking
   m_EditorClassIdentifier: 
-  name: Character Walking
+  soundName: Walk
   clip: {fileID: 8300000, guid: c0fdad56df29ac64a9364dc92f10281a, type: 3}
   volume: 1
   pitch: 1

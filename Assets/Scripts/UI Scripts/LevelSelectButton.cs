@@ -12,8 +12,14 @@ public class LevelSelectButton : MonoBehaviour
         GameManager.Instance.LoadLevel(level.name);
     }
 
+    public void OnClick()
+    {
+        AudioManager.PlaySound("Menu Select");
+    }
+
     public void OnSelect()
     {
+        AudioManager.PlaySound("Menu Hover");
         (transform as RectTransform).localScale = new Vector3(1.2f,1.2f,1);
     }
 

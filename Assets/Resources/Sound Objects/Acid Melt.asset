@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 950c66ff00b384bd28b3155b037af6fc, type: 3}
   m_Name: Acid Melt
   m_EditorClassIdentifier: 
-  name: Acid MElt
+  soundName: acid melt
   clip: {fileID: 8300000, guid: 2a9cfda7a9bef114d838a0a9bbc185c2, type: 3}
   volume: 1
   pitch: 1

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 950c66ff00b384bd28b3155b037af6fc, type: 3}
   m_Name: Finish Timer Tick
   m_EditorClassIdentifier: 
-  name: Finish Timer Ticking
+  soundName: Finsih Tick
   clip: {fileID: 8300000, guid: 94545f3c10dfba447a55f0c4c6269469, type: 3}
   volume: 1
   pitch: 1

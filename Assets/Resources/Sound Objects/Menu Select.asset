@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 950c66ff00b384bd28b3155b037af6fc, type: 3}
-  m_Name: Menu Slect
+  m_Name: Menu Select
   m_EditorClassIdentifier: 
-  name: Menu Select
+  soundName: Menu Select
   clip: {fileID: 8300000, guid: f7cc1a7ea1351f74bb159dccf2d3eb53, type: 3}
   volume: 1
   pitch: 1

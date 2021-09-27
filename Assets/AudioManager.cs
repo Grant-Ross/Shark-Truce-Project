@@ -8,7 +8,7 @@ public class AudioManager : MonoBehaviour
     private static AudioManager _instance;
     public static AudioManager Instance => _instance ? _instance : _instance = FindObjectOfType<AudioManager>();
 
-    private static Sound[] Sounds;
+    //private static Sound[] Sounds;
 
     private static Dictionary<string, AudioSource> SoundSources = new Dictionary<string, AudioSource>();
     
@@ -28,27 +28,27 @@ public class AudioManager : MonoBehaviour
 
     private void CreateSounds()
     {
-        Sounds = Resources.LoadAll<Sound>("Sound Objects");
-        
-        foreach (var s in Sounds)
+        var sounds = Resources.LoadAll<Sound>("Sound Objects");
+        SoundSources = new Dictionary<string, AudioSource>();
+        foreach (var s in sounds)
         {
             var source = gameObject.AddComponent<AudioSource>();
             source.clip = s.clip;
             source.volume = s.volume;
             source.pitch = s.pitch;
-            if(s.soundName != "")SoundSources.Add(s.soundName, source);
+            SoundSources.Add(s.soundName, source);
         }
     }
 
     private void CreateMusic()
     {
-        Music = Resources.LoadAll<Music>("Sound Objects/Music");
+        Music = Resources.LoadAll<Music>("Music");
         //musicSource = gameObject.AddComponent<AudioSource>();
     }
 
     public static void PlaySound(string sound)
     {
-        SoundSources[sound].Play();
+        if(SoundSources.ContainsKey(sound)) SoundSources[sound].Play();
     }
 
     public void PlayMusic(string music)
