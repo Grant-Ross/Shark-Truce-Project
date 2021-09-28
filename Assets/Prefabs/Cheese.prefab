@@ -16,6 +16,9 @@ MonoBehaviour:
   rb2D: {fileID: 5387177192335348689}
   groundCheck: {fileID: 5387177192335348694}
   animator: {fileID: 174274505884557377}
+  audioSource: {fileID: 1910060804316824292}
+  jump: {fileID: 8300000, guid: b1c6194803305514ea28e62dd989085a, type: 3}
+  land: {fileID: 8300000, guid: 478581430eaf86b49946552428e090cf, type: 3}
 --- !u!1001 &5588353773579368245
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -127,6 +130,11 @@ Rigidbody2D:
 --- !u!68 &5387177192335348694 stripped
 EdgeCollider2D:
   m_CorrespondingSourceObject: {fileID: 526581661691110627, guid: 93bb0de52b89c784bb867f5ea3f07fd1, type: 3}
+  m_PrefabInstance: {fileID: 5588353773579368245}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1910060804316824292 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6272445591827707345, guid: 93bb0de52b89c784bb867f5ea3f07fd1, type: 3}
   m_PrefabInstance: {fileID: 5588353773579368245}
   m_PrefabAsset: {fileID: 0}
 --- !u!95 &174274505884557377 stripped

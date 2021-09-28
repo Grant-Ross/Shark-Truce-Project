@@ -33,12 +33,9 @@ public class CameraFollow : MonoBehaviour
         if (!lerpY) lerpY = (fPos.y - pos.y) > 3 | (fPos.y - pos.y) < -1;
         else lerpY = !((pos.y - fPos.y) < .2f & (fPos.y - pos.y)  > -.1f);
 
-        var yDistance = Math.Abs((fPos.y - pos.y));
-        var yDelta = Mathf.Clamp(MoveSpeedY * (yDistance/4f), MoveSpeedY, MoveSpeedYMax);
-        
-        
+
         var moveX = Mathf.Lerp(pos.x, fPos.x, MoveSpeedX*Time.deltaTime);
-        var moveY = lerpY ? Mathf.Lerp(pos.y, fPos.y, yDelta*Time.deltaTime) : pos.y;
+        var moveY = lerpY ? Mathf.Lerp(pos.y, fPos.y, MoveSpeedY*Time.deltaTime) : pos.y;
         
         
         transform.position = new Vector3(moveX, moveY, pos.z);

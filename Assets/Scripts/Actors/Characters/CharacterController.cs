@@ -131,7 +131,13 @@ public class CharacterController : MonoBehaviour
     {
         CurrentState = State.Jumping;
         rb2D.velocity = new Vector2(rb2D.velocity.x, jumpPower);
-        //AudioManager.PlaySound("Jump");
+        PlaySound(jump);
+    }
+
+    private void PlaySound(AudioClip clip)
+    {
+        //audioSource.clip = clip;
+        audioSource.PlayOneShot(clip);
     }
 
 /*    protected void OnCollisionEnter2D(Collision2D other)
@@ -144,19 +150,20 @@ public class CharacterController : MonoBehaviour
 
     protected void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("End")) GameController.FinishedCharacters.Add(character);
+        if (other.gameObject.CompareTag("End")) GameController.UpdateFinishedChars(character,true);
         if(other.gameObject.CompareTag("Kill Plane")) GameController.Instance.ResetLevel();
     }
 
     protected void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("End")) GameController.FinishedCharacters.Remove(character);
+        if (other.gameObject.CompareTag("End")) GameController.UpdateFinishedChars(character,false);
     }
 
     protected virtual void OnTriggerStay2D(Collider2D other)
     {
         if ((other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Player")) && other.IsTouching(groundCheck))
         {
+            if(!Grounded) PlaySound(land);
             Grounded = true;
         }
 
@@ -164,7 +171,7 @@ public class CharacterController : MonoBehaviour
         {
             
             //rb2D.velocity = new Vector2(rb2D.velocity.x, Mathf.Clamp(rb2D.velocity.y, -20, 20));
-            if(rb2D.velocity.y < 13)rb2D.AddForce(new Vector2(0,18));
+            if(rb2D.velocity.y < 13)rb2D.AddForce(new Vector2(0,22));
             Grounded = false;
         }
     }

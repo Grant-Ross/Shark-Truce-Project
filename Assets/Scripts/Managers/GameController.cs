@@ -23,10 +23,17 @@ public class GameController : MonoBehaviour
     public static event Action<Character> CharacterSwitchListener;
     public static event Action StageFinishedListener;
 
-    private bool _levelFinished = false;
+    private static bool _levelFinished = false;
 
 
-    private void Start()
+    public static void UpdateFinishedChars(Character c, bool finished)
+    {
+        if (_levelFinished) return;
+        if (finished && !FinishedCharacters.Contains(c)) FinishedCharacters.Add(c);
+        else if (!finished && FinishedCharacters.Contains(c)) FinishedCharacters.Remove(c);
+    }
+    
+    private void Awake()
     {
         _currentCharacter = Character.None;
         _levelFinished = false;
@@ -34,8 +41,19 @@ public class GameController : MonoBehaviour
 
     private void Update()
     {
+        if (_levelFinished) return;
         if (Input.GetKeyDown(KeyCode.R)) ResetLevel();
-        if (CurrentCharacters.Count > 0 && FinishedCharacters.Count == CurrentCharacters.Count) FinishLevel();
+        var finished = true;
+        foreach (var c in CurrentCharacters.Keys)
+        {
+            if (!FinishedCharacters.Contains(c)) finished = false;
+        }
+
+        if (finished)
+        {
+            FinishedCharacters = new HashSet<Character>();
+            FinishLevel();
+        }
     }
 
 

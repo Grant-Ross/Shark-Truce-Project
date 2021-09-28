@@ -16,7 +16,7 @@ public class TomatoController : CharacterController
         if(!Current) return;
         base.Update();
         if (_cooldownTimer > 0) _cooldownTimer -= Time.deltaTime;
-        else if (Input.GetButtonDown("Fire")) ShootSeed();
+        else if (Input.GetKeyDown(KeyCode.J)) ShootSeed();
     }
 
     private void ShootSeed()
