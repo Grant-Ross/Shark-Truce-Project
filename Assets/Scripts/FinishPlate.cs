@@ -17,7 +17,6 @@ public class FinishPlate : MonoBehaviour
 
     private IEnumerator FinishSequence()
     {
-        print("hi");
         var bunPos = topBun.gameObject.transform.position.y;
         
         var t = topBun.gameObject.transform.DOMoveY(bunPos + 7, .5f).SetEase(Ease.OutCubic);
@@ -26,4 +25,6 @@ public class FinishPlate : MonoBehaviour
         topBun.sortingOrder = 10;
         topBun.gameObject.transform.DOMoveY(bunPos + 2.5f, .5f).SetEase(Ease.InCubic);
     }
+    
+    
 }

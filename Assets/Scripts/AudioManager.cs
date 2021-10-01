@@ -22,8 +22,8 @@ public class AudioManager : MonoBehaviour
     
     private void Awake()
     {
-        CreateSounds();
-        CreateMusic();
+        //CreateSounds();
+        //CreateMusic();
     }
 
     private void CreateSounds()
@@ -48,11 +48,13 @@ public class AudioManager : MonoBehaviour
 
     public static void PlaySound(string sound)
     {
+        return;
         if(SoundSources.ContainsKey(sound)) SoundSources[sound].Play();
     }
 
     public void PlayMusic(string music)
     {
+        return;
         foreach (var m in Music)
         {
             if (m.soundName == music)
@@ -67,6 +69,7 @@ public class AudioManager : MonoBehaviour
 
     public Music GetMusic(string music)
     {
+        return new Music();
         foreach (var m in Music)
         {
             if (m.soundName == music) return m;

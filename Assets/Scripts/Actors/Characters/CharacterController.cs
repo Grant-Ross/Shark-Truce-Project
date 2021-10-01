@@ -24,8 +24,10 @@ public class CharacterController : MonoBehaviour
 
     public enum State
     {
-        Idle, Walking, Jumping, Peak, Falling, Landing, Squish
+        Idle, Walking, Jumping, Peak, Falling, Landing,
     }
+
+    private bool _disabled = false;
 
     private State _currentState;
     protected State CurrentState
@@ -48,25 +50,31 @@ public class CharacterController : MonoBehaviour
     {
         GameController.Instance.AddCharacter(character, this);
         GameController.CharacterSwitchListener += OnCharacterSwitch;
+        GameController.StageFinishedListener += DisableCharacter;
         _currentState = State.Idle;
+        Velocity = rb2D.velocity;
     }
-
-
     private void OnDestroy()
     {
         GameController.CharacterSwitchListener -= OnCharacterSwitch;
+        GameController.StageFinishedListener -= DisableCharacter;
+    }
+    private void DisableCharacter()
+    {
+        _disabled = true;
     }
 
     protected virtual void Update()
     {
-        if (!Current) return;
+        Velocity.y = rb2D.velocity.y;
+        UpdateAnimation();
+        if (!Current || _disabled) return;
         Velocity.x = Input.GetAxis("Horizontal") * walkSpeed;
         if (Velocity.x != 0) facingRight = Velocity.x > 0;
         transform.localScale = new Vector3(Math.Abs(transform.localScale.x) * (facingRight ? 1: -1), transform.localScale.y, transform.localScale.z);
         if (Grounded && Input.GetButtonDown("Jump")) Jump();
-        Velocity.y = rb2D.velocity.y;
         if (_landTimer > 0) _landTimer -= Time.deltaTime;
-        UpdateAnimation();
+        
     }
 
     private void UpdateAnimation()
@@ -100,11 +108,9 @@ public class CharacterController : MonoBehaviour
             else if (Velocity.y < -2f) CurrentState = State.Falling;
             else if(CurrentState == State.Jumping) CurrentState = State.Peak;
         }
-        //animator.SetBool("Squish",Input.GetAxis("Vertical") < 0);
         
         if (!stateChanged) return;
         stateChanged = false;
-        //print(CurrentState);
         switch (CurrentState)
         {
             case State.Idle: animator.Play("char_idle");
@@ -136,17 +142,8 @@ public class CharacterController : MonoBehaviour
 
     private void PlaySound(AudioClip clip)
     {
-        //audioSource.clip = clip;
         audioSource.PlayOneShot(clip);
     }
-
-/*    protected void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Player"))
-        {
-            Grounded = true;
-        }
-    }*/
 
     protected void OnTriggerEnter2D(Collider2D other)
     {

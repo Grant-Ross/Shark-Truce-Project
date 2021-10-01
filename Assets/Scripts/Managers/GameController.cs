@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
@@ -23,6 +25,9 @@ public class GameController : MonoBehaviour
     public static event Action<Character> CharacterSwitchListener;
     public static event Action StageFinishedListener;
 
+    [SerializeField] private RectTransform endImage;
+   
+
     private static bool _levelFinished = false;
 
 
@@ -37,6 +42,8 @@ public class GameController : MonoBehaviour
     {
         _currentCharacter = Character.None;
         _levelFinished = false;
+        endImage.DOAnchorPosY(0, 2).SetEase(Ease.OutBounce);
+
     }
 
     private void Update()
@@ -100,6 +107,8 @@ public class GameController : MonoBehaviour
         yield return new WaitForSeconds(.6f);
         FindObjectOfType<FinishPlate>().StartFinishSequence();
         yield return new WaitForSeconds(2.5f);
+        //endImage.DOAnchorPosY(0, 2).SetEase(Ease.OutBounce);
+        yield return new WaitForSeconds(3);
         GameManager.Instance.LevelFinished();
     }
     
