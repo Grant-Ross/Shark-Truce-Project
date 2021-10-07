@@ -20,7 +20,7 @@ public class Lever : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && _swapReady)
+        if ((other.CompareTag("Player")|| other.CompareTag("Projectile")) && _swapReady)
         {
             _timer = Cooldown;
             _swapReady = false;

@@ -777,6 +777,63 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1001 &1116197706
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8588705575548060085, guid: d98b13c4f67d13a448db5d8943b6060f, type: 3}
+      propertyPath: m_Name
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 8588705575548060086, guid: d98b13c4f67d13a448db5d8943b6060f, type: 3}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 8588705575548060086, guid: d98b13c4f67d13a448db5d8943b6060f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8588705575548060086, guid: d98b13c4f67d13a448db5d8943b6060f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 18.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8588705575548060086, guid: d98b13c4f67d13a448db5d8943b6060f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8588705575548060086, guid: d98b13c4f67d13a448db5d8943b6060f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8588705575548060086, guid: d98b13c4f67d13a448db5d8943b6060f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8588705575548060086, guid: d98b13c4f67d13a448db5d8943b6060f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8588705575548060086, guid: d98b13c4f67d13a448db5d8943b6060f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8588705575548060086, guid: d98b13c4f67d13a448db5d8943b6060f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8588705575548060086, guid: d98b13c4f67d13a448db5d8943b6060f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8588705575548060086, guid: d98b13c4f67d13a448db5d8943b6060f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d98b13c4f67d13a448db5d8943b6060f, type: 3}
 --- !u!1 &1186036353
 GameObject:
   m_ObjectHideFlags: 0
@@ -833,8 +890,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -874085887
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 8597105283488969343, guid: 00ead5066f624144b9efc5e4cfeff186, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1029,8 +1086,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -874085887
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: -6696897164379916337, guid: e405819b603a1be40b208da33ca00bba, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1160,8 +1217,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -874085887
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 5739897283171119737, guid: fd2384589636cd54199c015175622f90, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1643,8 +1700,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -874085887
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 8597105283488969343, guid: 00ead5066f624144b9efc5e4cfeff186, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

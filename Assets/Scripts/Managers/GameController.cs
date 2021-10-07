@@ -42,21 +42,20 @@ public class GameController : MonoBehaviour
     {
         _currentCharacter = Character.None;
         _levelFinished = false;
-        endImage.DOAnchorPosY(0, 2).SetEase(Ease.OutBounce);
-
     }
 
     private void Update()
     {
         if (_levelFinished) return;
         if (Input.GetKeyDown(KeyCode.R)) ResetLevel();
+        if(Input.GetKeyDown(KeyCode.Escape)) ExitLevel();
         var finished = true;
         foreach (var c in CurrentCharacters.Keys)
         {
             if (!FinishedCharacters.Contains(c)) finished = false;
         }
 
-        if (finished)
+        if (FinishedCharacters.Count > 0 && finished)
         {
             FinishedCharacters = new HashSet<Character>();
             FinishLevel();
@@ -92,6 +91,14 @@ public class GameController : MonoBehaviour
         GameManager.Instance.LoadLevel(SceneManager.GetActiveScene().name);
     }
 
+    private void ExitLevel()
+    {
+        if (_levelFinished) return;
+        _levelFinished = true;
+        ResetCharacters();
+        GameManager.Instance.LoadScene("LevelSelect");
+    }
+
     private void FinishLevel()
     {
         if (_levelFinished) return;
@@ -106,9 +113,9 @@ public class GameController : MonoBehaviour
         
         yield return new WaitForSeconds(.6f);
         FindObjectOfType<FinishPlate>().StartFinishSequence();
+        yield return new WaitForSeconds(1.5f);
+        endImage.DOAnchorPosY(0, 2).SetEase(Ease.OutBounce);
         yield return new WaitForSeconds(2.5f);
-        //endImage.DOAnchorPosY(0, 2).SetEase(Ease.OutBounce);
-        yield return new WaitForSeconds(3);
         GameManager.Instance.LevelFinished();
     }
     

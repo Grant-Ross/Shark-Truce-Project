@@ -17,6 +17,7 @@ public class FinishPlate : MonoBehaviour
 
     private IEnumerator FinishSequence()
     {
+        AudioManager.Instance.PlayMusic("Finish");
         var bunPos = topBun.gameObject.transform.position.y;
         
         var t = topBun.gameObject.transform.DOMoveY(bunPos + 7, .5f).SetEase(Ease.OutCubic);

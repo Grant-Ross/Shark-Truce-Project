@@ -16,14 +16,16 @@ public class AudioManager : MonoBehaviour
     private static Music[] Music;
 
     [SerializeField] private AudioSource musicSource;
-    private Music _currentMusic;
+    private static Music _currentMusic;
+
+    public static string CurrentMusic => _currentMusic.name;
 
     private bool _musicSwitch = false;
     
     private void Awake()
     {
-        //CreateSounds();
-        //CreateMusic();
+        CreateSounds();
+        CreateMusic();
     }
 
     private void CreateSounds()
@@ -48,13 +50,13 @@ public class AudioManager : MonoBehaviour
 
     public static void PlaySound(string sound)
     {
-        return;
+        //return;
         if(SoundSources.ContainsKey(sound)) SoundSources[sound].Play();
     }
 
     public void PlayMusic(string music)
     {
-        return;
+        //return;
         foreach (var m in Music)
         {
             if (m.soundName == music)
@@ -69,7 +71,7 @@ public class AudioManager : MonoBehaviour
 
     public Music GetMusic(string music)
     {
-        return new Music();
+        //return new Music();
         foreach (var m in Music)
         {
             if (m.soundName == music) return m;
@@ -82,10 +84,13 @@ public class AudioManager : MonoBehaviour
         yield return null;
         _musicSwitch = false;
         _currentMusic = music;
-        musicSource.clip = music.head;
-        musicSource.loop = false;
-        musicSource.Play();
-        while (musicSource.isPlaying && !_musicSwitch) yield return null;
+        if (music.head != null)
+        {
+            musicSource.clip = music.head;
+            musicSource.loop = false;
+            musicSource.Play();
+            while (musicSource.isPlaying && !_musicSwitch) yield return null;
+        }
         musicSource.clip = music.clip;
         musicSource.loop = true;
         musicSource.Play();

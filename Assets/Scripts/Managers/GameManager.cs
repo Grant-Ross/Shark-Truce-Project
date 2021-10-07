@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
         
     }
 
+    private bool firstLoad = true;
     private void Start()
     {
         LoadScene("TitleScreen");
@@ -35,6 +36,7 @@ public class GameManager : MonoBehaviour
         _sceneReady = false;
         var tween = MoveTransition();
         SceneManager.sceneLoaded += OnLevelLoaded;
+        firstLoad = false;
         StartCoroutine(WaitForLoad(tween, levelName, AudioManager.Instance.GetMusic("Level")));
     }
 
@@ -43,7 +45,8 @@ public class GameManager : MonoBehaviour
         _sceneReady = false;
         var tween = MoveTransition();
         SceneManager.sceneLoaded += OnSceneLoaded;
-        StartCoroutine(WaitForLoad(tween, sceneName, AudioManager.Instance.GetMusic("Title")));
+        if (firstLoad) StartCoroutine(WaitForLoad(tween, sceneName, AudioManager.Instance.GetMusic("Title")));
+        else if(AudioManager.CurrentMusic != "Title") StartCoroutine(WaitForLoad(tween, sceneName, AudioManager.Instance.GetMusic("Title No Intro")));
     }
 
     private Tween MoveTransition()
@@ -71,13 +74,14 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator WaitForLoad(Tween tween, string sceneName, Music music)
     {
+        
         while (tween.IsPlaying()) yield return null;
         SceneManager.LoadScene(sceneName);
         while (!_sceneReady) yield return null;
         (transitionObject.transform as RectTransform).DOAnchorPosX((transitionObject.transform as RectTransform).sizeDelta.x, .4f).SetEase(Ease.OutExpo);
         AudioManager.Instance.PlayMusic(music.soundName);
     }
-
+    
     public void LevelFinished()
     {
         if (!finishedLevels.Contains(SceneManager.GetActiveScene().name))

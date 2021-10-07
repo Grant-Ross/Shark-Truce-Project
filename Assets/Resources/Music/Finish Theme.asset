@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Finish Theme
   m_EditorClassIdentifier: 
   soundName: Finish
-  clip: {fileID: 8300000, guid: 9addf06ff922d4e07a12fda0f16a086b, type: 3}
+  clip: {fileID: 8300000, guid: 831f0ce5c9ba3b64b8cee74b3cbfcf9a, type: 3}
   volume: 1
   pitch: 1
   source: {fileID: 0}
-  head: {fileID: 8300000, guid: eeb16cfc153394d15929b17a4a096f58, type: 3}
+  head: {fileID: 0}

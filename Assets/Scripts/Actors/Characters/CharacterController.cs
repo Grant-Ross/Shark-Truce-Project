@@ -68,13 +68,12 @@ public class CharacterController : MonoBehaviour
     {
         Velocity.y = rb2D.velocity.y;
         UpdateAnimation();
+        if (_landTimer > 0) _landTimer -= Time.deltaTime;
         if (!Current || _disabled) return;
         Velocity.x = Input.GetAxis("Horizontal") * walkSpeed;
         if (Velocity.x != 0) facingRight = Velocity.x > 0;
         transform.localScale = new Vector3(Math.Abs(transform.localScale.x) * (facingRight ? 1: -1), transform.localScale.y, transform.localScale.z);
         if (Grounded && Input.GetButtonDown("Jump")) Jump();
-        if (_landTimer > 0) _landTimer -= Time.deltaTime;
-        
     }
 
     private void UpdateAnimation()

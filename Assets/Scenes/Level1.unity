@@ -1460,6 +1460,68 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7.04, y: 6.33}
   m_EdgeRadius: 0
+--- !u!1001 &1199276047
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1403806186}
+    m_Modifications:
+    - target: {fileID: 8588705575548060085, guid: d98b13c4f67d13a448db5d8943b6060f, type: 3}
+      propertyPath: m_Name
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 8588705575548060086, guid: d98b13c4f67d13a448db5d8943b6060f, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8588705575548060086, guid: d98b13c4f67d13a448db5d8943b6060f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8588705575548060086, guid: d98b13c4f67d13a448db5d8943b6060f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8588705575548060086, guid: d98b13c4f67d13a448db5d8943b6060f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8588705575548060086, guid: d98b13c4f67d13a448db5d8943b6060f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8588705575548060086, guid: d98b13c4f67d13a448db5d8943b6060f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8588705575548060086, guid: d98b13c4f67d13a448db5d8943b6060f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8588705575548060086, guid: d98b13c4f67d13a448db5d8943b6060f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8588705575548060086, guid: d98b13c4f67d13a448db5d8943b6060f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8588705575548060086, guid: d98b13c4f67d13a448db5d8943b6060f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8588705575548060086, guid: d98b13c4f67d13a448db5d8943b6060f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d98b13c4f67d13a448db5d8943b6060f, type: 3}
+--- !u!4 &1199276048 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8588705575548060086, guid: d98b13c4f67d13a448db5d8943b6060f, type: 3}
+  m_PrefabInstance: {fileID: 1199276047}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1204142878
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1578,7 +1640,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1403806185}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.2, y: 1.59, z: -0.19912693}
+  m_LocalPosition: {x: -12.2, y: 1.59, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 639722987}
@@ -1592,6 +1654,7 @@ Transform:
   - {fileID: 907133124}
   - {fileID: 458631672}
   - {fileID: 1680994422}
+  - {fileID: 1199276048}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1997,7 +2060,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -874085887
   m_SortingLayer: -1
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 5739897283171119737, guid: fd2384589636cd54199c015175622f90, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2017,7 +2080,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1687331254}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 66.8, y: -9.6, z: 0.19912693}
+  m_LocalPosition: {x: 66.8, y: -9.6, z: 0}
   m_LocalScale: {x: 3, y: 2.8, z: 1}
   m_Children: []
   m_Father: {fileID: 1403806186}

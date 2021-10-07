@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundName: Menu Browse
   clip: {fileID: 8300000, guid: 39743c6f3580d3f4f89c67d9517225cc, type: 3}
-  volume: 1
+  volume: 0.808
   pitch: 1
   source: {fileID: 0}
